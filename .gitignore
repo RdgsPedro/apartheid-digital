@@ -1,8 +1,8 @@
-# Microdados originais - grandes demais para o Git, baixar direto do CETIC.br
-data/raw/*.csv
+# Microdados originais - grandes demais para o Git
+data/raw/**/*.csv
 
 # Dados processados (avaliar se entram no Git dependendo do tamanho final)
-data/processed/*.csv
+data/processed/**/*.csv
 
 # Python
 __pycache__/
