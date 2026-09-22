@@ -1,0 +1,19 @@
+variavel_final,modulo,nome_2023,nome_2024,nome_2025,precisa_recodificar,observacao
+chave_domicilio,domicilios+individuos,ID_DOMICILIO,ID_DOMICILIO,ID_DOMICILIO,nao,chave de juncao entre os modulos domicilios e individuos; identica nos 3 anos
+peso_amostral_domicilio,domicilios,PESO,PESO,PESO,nao,peso amostral do DOMICILIO; usar so em estatisticas no nivel de domicilio (ex: % de casas com internet). NAO usar para testes com G1/G2
+peso_amostral_individuo,individuos,PESO,PESO,PESO,nao,"peso amostral do RESPONDENTE INDIVIDUAL (16+); confirmado nos dados que e diferente do peso_amostral_domicilio linha a linha (testado em 2023: 100% das linhas diferem). Este e o peso certo pra qualquer teste envolvendo G1/G2, mesmo quando cruzado com variavel de domicilio (renda, regiao etc), porque a unidade de analise e a pessoa"
+renda_familiar,domicilios,RENDA_FAMILIAR_2,RENDA_FAMILIAR_2,RENDA_FAMILIAR_2,nao,6 faixas de salario minimo idênticas; NAO usar RENDA_FAMILIAR (muda de estrutura entre os anos)
+classe_economica,domicilios,CLASSE_2015,CLASSE_2015,CLASSE_2015,nao,Criterio Brasil 2015 identica nos 3 anos
+escolaridade,individuos,GRAU_INSTRUCAO_2,GRAU_INST_1,GRAU_INST_1,sim (rename),versao agregada 4 categorias identicas; NAO usar GRAU_INSTRUCAO/GRAU_INSTRUCAO_1 (versao detalhada muda de estrutura e de nome)
+raca,individuos,RACA,RACA,RACA,nao,"5 categorias validas (1=Branca 2=Preta 3=Parda 4=Amarela 5=Indigena) mais o codigo 98=""Nao respondeu"", CONFIRMADO no dicionario oficial (2023/2024/2025 identicos). Tratado como NaN em individuos_harmonizado.csv"
+sexo,individuos,SEXO,SEXO,SEXO,nao,identica nos 3 anos
+idade,individuos,IDADE,IDADE,IDADE,nao,identica nos 3 anos
+regiao,domicilios,COD_REGIAO_2,COD_REGIAO_2,COD_REGIAO_2,nao,identica nos 3 anos
+area_urbano_rural,domicilios,AREA,AREA,AREA,nao,identica nos 3 anos
+velocidade_conexao,domicilios,A8,A8,A8A,sim (recodificar),ver funcao recodificar_velocidade() em src/harmonizacao.py; 10 categorias em 2023/2024 x 7 categorias em 2025 agrupadas em baixa/media/alta/sem conexao
+valor_conexao,domicilios,A9_FAIXA,A9_FAIXA,A9_FAIXA,nao,ja vem pronta e identica do CETIC nos 3 anos
+transacoes_financeiras,individuos,C8_H,C8_H,C8_H,nao,identica nos 3 anos
+g1_agreg,individuos,G1_AGREG,G1_AGREG,G1_AGREG,nao,indicador simples sim/nao de uso de pelo menos um servico; uso opcional
+bateria_g1_g2,individuos,G1_A..G1_G / G2_A..G2_G,G1_A..G1_G / G2_A..G2_G,G1_A..G1_H / G2_A..G2_H,sim (recodificar G2),8 areas A=documentos B=saude C=educacao D=trabalho E=impostos F=policia G=transporte H=justica (H so existe em 2025 fica fora do ranking principal); ver recodificar_g2() em src/harmonizacao.py
+pesos_replica_domicilio,domicilios,rep1..rep200,REP1..REP200,REP1..REP200,sim (rename+padronizar),"200 colunas de peso replica DO DOMICILIO para bootstrap do Rao-Scott; 2023 vem minuscula rep1..rep200 e 2024/2025 vem maiuscula REP1..REP200, padronizado tudo pra minusculo. Usar so em testes no nivel de domicilio"
+pesos_replica_individuo,individuos,rep1..rep200,rep1..rep200,rep1..rep200,nao,200 colunas de peso replica DO INDIVIDUO para bootstrap do Rao-Scott; ja vem minuscula e consistente nos 3 anos sem precisar de rename. Confirmado nos dados que e diferente do pesos_replica_domicilio linha a linha (testado rep1 em 2023: 13798 de 21271 pessoas diferem). Este e o conjunto de replicas certo pra qualquer teste envolvendo G1/G2

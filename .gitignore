@@ -1,8 +1,9 @@
 # Microdados originais - grandes demais para o Git
 data/raw/**/*.csv
-
 # Dados processados (avaliar se entram no Git dependendo do tamanho final)
 data/processed/**/*.csv
+# Dicionarios 
+docs/fontes_cetic/dicionarios/**/*.xlsx
 
 # Python
 __pycache__/
