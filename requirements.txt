@@ -1,9 +1,22 @@
+# Leitura, limpeza e harmonizacao
 pandas
 numpy
+openpyxl
+
+# Estatistica
 scipy
 statsmodels
+# svy: Rao-Scott, proporcoes com IC e regressao com o desenho amostral.
+# Versao fixa porque a biblioteca ainda esta em beta e muda a API entre versoes;
+# os exemplos do guia de estatistica foram testados na 0.31.0
+svy==0.31.0
+# o svy trabalha com tabelas Polars; o pyarrow faz a conversao do pandas para o Polars
+polars
+pyarrow
+
+# Graficos da analise exploratoria
 matplotlib
 seaborn
+
+# Notebooks
 jupyter
-openpyxl
-samplics

@@ -1,15 +1,14 @@
-# Microdados originais - grandes demais para o Git
+# Microdados originais - grandes demais para o Git (ver data/raw/README.md)
 data/raw/**/*.csv
-# Dados processados (avaliar se entram no Git dependendo do tamanho final)
+# Dados processados - regenerados pelo notebook 01 (ver data/processed/README.md)
 data/processed/**/*.csv
-# Dicionarios 
-docs/fontes_cetic/dicionarios/**/*.xlsx
 
 # Python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 venv/
+.venv/
 .env
 
 # Sistema
