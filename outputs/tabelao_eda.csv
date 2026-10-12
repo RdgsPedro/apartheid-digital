@@ -1,0 +1,463 @@
+ano,area,dimensao,categoria,n,resolveram,pct_sem_peso,pct_com_peso,n_efetivo
+2023,documentos,renda_familiar,até 1 SM,1028,209,20.3,18.9,84
+2023,documentos,renda_familiar,1 a 2 SM,1040,273,26.2,40.6,32
+2023,documentos,renda_familiar,2 a 3 SM,659,212,32.2,48.3,54
+2023,documentos,renda_familiar,3 a 5 SM,498,176,35.3,29.8,44
+2023,documentos,renda_familiar,5 a 10 SM,241,96,39.8,31.9,38
+2023,documentos,renda_familiar,mais de 10 SM,112,46,41.1,36.6,17
+2023,documentos,renda_familiar,não tem renda,65,10,15.4,12.7,11
+2023,documentos,raca,branca,1031,339,32.9,37.7,57
+2023,documentos,raca,preta,587,146,24.9,40.9,52
+2023,documentos,raca,parda,1999,539,27.0,31.5,146
+2023,documentos,raca,amarela,112,29,25.9,23.2,26
+2023,documentos,raca,indígena,68,17,25.0,6.6,9
+2023,documentos,escolaridade,analfabeto/infantil,95,20,21.1,26.5,9
+2023,documentos,escolaridade,fundamental,707,141,19.9,30.2,60
+2023,documentos,escolaridade,médio,2064,557,27.0,35.3,185
+2023,documentos,escolaridade,superior,974,364,37.4,37.1,46
+2023,documentos,regiao,Sudeste,552,169,30.6,40.2,63
+2023,documentos,regiao,Nordeste,1136,239,21.0,22.8,129
+2023,documentos,regiao,Sul,488,190,38.9,37.7,83
+2023,documentos,regiao,Norte,1085,288,26.5,25.0,122
+2023,documentos,regiao,Centro-Oeste,579,196,33.9,39.2,155
+2023,saúde,renda_familiar,até 1 SM,1581,231,14.6,18.9,219
+2023,saúde,renda_familiar,1 a 2 SM,1343,219,16.3,20.0,69
+2023,saúde,renda_familiar,2 a 3 SM,776,154,19.8,18.1,77
+2023,saúde,renda_familiar,3 a 5 SM,551,154,27.9,33.0,79
+2023,saúde,renda_familiar,5 a 10 SM,278,73,26.3,20.1,46
+2023,saúde,renda_familiar,mais de 10 SM,90,33,36.7,29.2,20
+2023,saúde,renda_familiar,não tem renda,82,15,18.3,29.9,22
+2023,saúde,raca,branca,1362,283,20.8,23.2,179
+2023,saúde,raca,preta,690,128,18.6,32.6,25
+2023,saúde,raca,parda,2613,469,17.9,17.9,274
+2023,saúde,raca,amarela,140,21,15.0,10.7,43
+2023,saúde,raca,indígena,80,12,15.0,4.6,7
+2023,saúde,escolaridade,analfabeto/infantil,193,29,15.0,32.2,24
+2023,saúde,escolaridade,fundamental,1225,189,15.4,14.6,177
+2023,saúde,escolaridade,médio,2486,434,17.5,22.4,161
+2023,saúde,escolaridade,superior,1049,275,26.2,26.1,128
+2023,saúde,regiao,Sudeste,690,140,20.3,20.4,137
+2023,saúde,regiao,Nordeste,1533,217,14.2,13.3,243
+2023,saúde,regiao,Sul,674,171,25.4,35.6,38
+2023,saúde,regiao,Norte,1334,224,16.8,20.1,193
+2023,saúde,regiao,Centro-Oeste,722,175,24.2,25.1,214
+2023,educação,renda_familiar,até 1 SM,914,234,25.6,26.4,86
+2023,educação,renda_familiar,1 a 2 SM,799,260,32.5,43.6,18
+2023,educação,renda_familiar,2 a 3 SM,482,166,34.4,21.5,32
+2023,educação,renda_familiar,3 a 5 SM,387,146,37.7,44.5,38
+2023,educação,renda_familiar,5 a 10 SM,193,79,40.9,32.8,24
+2023,educação,renda_familiar,mais de 10 SM,55,31,56.4,50.2,25
+2023,educação,renda_familiar,não tem renda,43,9,20.9,26.1,18
+2023,educação,raca,branca,742,284,38.3,45.7,36
+2023,educação,raca,preta,502,144,28.7,25.9,62
+2023,educação,raca,parda,1630,499,30.6,27.1,104
+2023,educação,raca,amarela,72,27,37.5,32.7,23
+2023,educação,raca,indígena,57,13,22.8,11.4,7
+2023,educação,escolaridade,analfabeto/infantil,41,16,39.0,55.9,4
+2023,educação,escolaridade,fundamental,308,59,19.2,14.2,23
+2023,educação,escolaridade,médio,1766,532,30.1,27.0,146
+2023,educação,escolaridade,superior,902,365,40.5,52.5,32
+2023,educação,regiao,Sudeste,339,114,33.6,41.9,38
+2023,educação,regiao,Nordeste,941,242,25.7,20.8,133
+2023,educação,regiao,Sul,304,130,42.8,36.6,58
+2023,educação,regiao,Norte,1020,330,32.4,27.1,32
+2023,educação,regiao,Centro-Oeste,413,156,37.8,33.9,101
+2023,trabalho,renda_familiar,até 1 SM,1175,257,21.9,18.8,187
+2023,trabalho,renda_familiar,1 a 2 SM,1178,307,26.1,33.6,38
+2023,trabalho,renda_familiar,2 a 3 SM,720,220,30.6,33.7,59
+2023,trabalho,renda_familiar,3 a 5 SM,510,207,40.6,39.3,56
+2023,trabalho,renda_familiar,5 a 10 SM,229,104,45.4,37.5,25
+2023,trabalho,renda_familiar,mais de 10 SM,99,49,49.5,52.9,13
+2023,trabalho,renda_familiar,não tem renda,63,13,20.6,41.0,10
+2023,trabalho,raca,branca,1157,384,33.2,37.0,60
+2023,trabalho,raca,preta,629,164,26.1,24.1,67
+2023,trabalho,raca,parda,2150,595,27.7,34.6,148
+2023,trabalho,raca,amarela,98,38,38.8,27.4,21
+2023,trabalho,raca,indígena,64,16,25.0,38.1,7
+2023,trabalho,escolaridade,analfabeto/infantil,153,33,21.6,22.0,17
+2023,trabalho,escolaridade,fundamental,899,195,21.7,19.4,62
+2023,trabalho,escolaridade,médio,2106,585,27.8,29.1,151
+2023,trabalho,escolaridade,superior,989,396,40.0,50.8,48
+2023,trabalho,regiao,Sudeste,623,202,32.4,37.5,73
+2023,trabalho,regiao,Nordeste,1234,271,22.0,24.5,187
+2023,trabalho,regiao,Sul,585,229,39.1,41.4,97
+2023,trabalho,regiao,Norte,1123,307,27.3,24.1,34
+2023,trabalho,regiao,Centro-Oeste,582,200,34.4,32.1,156
+2023,impostos,renda_familiar,até 1 SM,522,160,30.7,28.9,90
+2023,impostos,renda_familiar,1 a 2 SM,813,306,37.6,48.7,17
+2023,impostos,renda_familiar,2 a 3 SM,717,340,47.4,45.9,60
+2023,impostos,renda_familiar,3 a 5 SM,687,384,55.9,63.0,64
+2023,impostos,renda_familiar,5 a 10 SM,409,267,65.3,67.1,79
+2023,impostos,renda_familiar,mais de 10 SM,154,106,68.8,75.9,25
+2023,impostos,renda_familiar,não tem renda,30,10,33.3,29.0,4
+2023,impostos,raca,branca,1193,672,56.3,63.5,66
+2023,impostos,raca,preta,463,192,41.5,49.6,64
+2023,impostos,raca,parda,1756,782,44.5,48.3,156
+2023,impostos,raca,amarela,84,35,41.7,59.9,18
+2023,impostos,raca,indígena,49,20,40.8,22.1,10
+2023,impostos,escolaridade,analfabeto/infantil,69,23,33.3,49.5,7
+2023,impostos,escolaridade,fundamental,486,153,31.5,23.4,34
+2023,impostos,escolaridade,médio,1618,693,42.8,46.8,154
+2023,impostos,escolaridade,superior,1403,845,60.2,68.4,79
+2023,impostos,regiao,Sudeste,594,306,51.5,59.8,72
+2023,impostos,regiao,Nordeste,819,318,38.8,41.4,138
+2023,impostos,regiao,Sul,611,361,59.1,59.9,139
+2023,impostos,regiao,Norte,965,404,41.9,36.1,28
+2023,impostos,regiao,Centro-Oeste,587,325,55.4,59.7,180
+2023,polícia,renda_familiar,até 1 SM,377,111,29.4,31.3,41
+2023,polícia,renda_familiar,1 a 2 SM,350,122,34.9,35.4,51
+2023,polícia,renda_familiar,2 a 3 SM,257,105,40.9,32.9,29
+2023,polícia,renda_familiar,3 a 5 SM,210,114,54.3,46.1,17
+2023,polícia,renda_familiar,5 a 10 SM,124,64,51.6,63.5,26
+2023,polícia,renda_familiar,mais de 10 SM,50,34,68.0,77.0,9
+2023,polícia,renda_familiar,não tem renda,16,6,37.5,78.5,3
+2023,polícia,raca,branca,420,197,46.9,55.3,62
+2023,polícia,raca,preta,221,94,42.5,37.8,31
+2023,polícia,raca,parda,738,269,36.4,39.8,58
+2023,polícia,raca,amarela,33,11,33.3,51.3,11
+2023,polícia,raca,indígena,31,12,38.7,31.1,3
+2023,polícia,escolaridade,analfabeto/infantil,41,16,39.0,52.6,8
+2023,polícia,escolaridade,fundamental,250,61,24.4,16.0,13
+2023,polícia,escolaridade,médio,722,275,38.1,40.6,98
+2023,polícia,escolaridade,superior,446,236,52.9,65.2,67
+2023,polícia,regiao,Sudeste,187,92,49.2,52.1,46
+2023,polícia,regiao,Nordeste,359,106,29.5,36.6,73
+2023,polícia,regiao,Sul,240,119,49.6,53.9,51
+2023,polícia,regiao,Norte,468,167,35.7,25.9,11
+2023,polícia,regiao,Centro-Oeste,205,104,50.7,46.0,74
+2023,transporte,renda_familiar,até 1 SM,413,98,23.7,31.6,49
+2023,transporte,renda_familiar,1 a 2 SM,443,127,28.7,48.7,9
+2023,transporte,renda_familiar,2 a 3 SM,296,98,33.1,38.8,16
+2023,transporte,renda_familiar,3 a 5 SM,221,89,40.3,36.7,33
+2023,transporte,renda_familiar,5 a 10 SM,111,47,42.3,53.6,19
+2023,transporte,renda_familiar,mais de 10 SM,50,30,60.0,62.2,11
+2023,transporte,renda_familiar,não tem renda,19,7,36.8,32.3,8
+2023,transporte,raca,branca,493,197,40.0,55.1,20
+2023,transporte,raca,preta,241,66,27.4,37.0,26
+2023,transporte,raca,parda,813,230,28.3,28.8,66
+2023,transporte,raca,amarela,46,12,26.1,32.1,13
+2023,transporte,raca,indígena,33,9,27.3,15.4,9
+2023,transporte,escolaridade,analfabeto/infantil,36,13,36.1,39.8,6
+2023,transporte,escolaridade,fundamental,281,65,23.1,32.9,23
+2023,transporte,escolaridade,médio,864,260,30.1,31.0,66
+2023,transporte,escolaridade,superior,458,182,39.7,60.8,15
+2023,transporte,regiao,Sudeste,270,108,40.0,51.1,23
+2023,transporte,regiao,Nordeste,450,102,22.7,21.9,94
+2023,transporte,regiao,Sul,302,135,44.7,46.0,58
+2023,transporte,regiao,Norte,369,83,22.5,15.4,59
+2023,transporte,regiao,Centro-Oeste,248,92,37.1,39.9,80
+2024,documentos,renda_familiar,até 1 SM,890,216,24.3,19.8,88
+2024,documentos,renda_familiar,1 a 2 SM,951,298,31.3,31.1,71
+2024,documentos,renda_familiar,2 a 3 SM,695,219,31.5,25.4,36
+2024,documentos,renda_familiar,3 a 5 SM,447,171,38.3,39.8,55
+2024,documentos,renda_familiar,5 a 10 SM,225,91,40.4,34.9,32
+2024,documentos,renda_familiar,mais de 10 SM,72,31,43.1,57.0,9
+2024,documentos,renda_familiar,não tem renda,34,7,20.6,11.0,3
+2024,documentos,raca,branca,885,319,36.0,32.7,71
+2024,documentos,raca,preta,488,132,27.0,20.4,13
+2024,documentos,raca,parda,1902,573,30.1,31.3,129
+2024,documentos,raca,amarela,87,26,29.9,33.7,18
+2024,documentos,raca,indígena,73,23,31.5,27.4,7
+2024,documentos,escolaridade,analfabeto/infantil,7,2,28.6,81.0,2
+2024,documentos,escolaridade,fundamental,612,142,23.2,27.9,61
+2024,documentos,escolaridade,médio,1909,579,30.3,32.5,152
+2024,documentos,escolaridade,superior,938,361,38.5,29.3,40
+2024,documentos,regiao,Sudeste,488,189,38.7,32.9,58
+2024,documentos,regiao,Nordeste,1094,239,21.8,21.0,180
+2024,documentos,regiao,Sul,423,182,43.0,39.8,84
+2024,documentos,regiao,Norte,1037,318,30.7,23.8,108
+2024,documentos,regiao,Centro-Oeste,424,156,36.8,32.1,39
+2024,saúde,renda_familiar,até 1 SM,1224,238,19.4,23.4,231
+2024,saúde,renda_familiar,1 a 2 SM,1131,276,24.4,18.5,71
+2024,saúde,renda_familiar,2 a 3 SM,761,204,26.8,33.6,40
+2024,saúde,renda_familiar,3 a 5 SM,445,148,33.3,24.7,42
+2024,saúde,renda_familiar,5 a 10 SM,205,59,28.8,34.1,25
+2024,saúde,renda_familiar,mais de 10 SM,57,19,33.3,38.8,15
+2024,saúde,renda_familiar,não tem renda,53,11,20.8,6.3,3
+2024,saúde,raca,branca,1099,306,27.8,30.4,67
+2024,saúde,raca,preta,603,134,22.2,20.9,17
+2024,saúde,raca,parda,2140,509,23.8,21.5,145
+2024,saúde,raca,amarela,115,35,30.4,48.0,23
+2024,saúde,raca,indígena,65,13,20.0,36.2,10
+2024,saúde,escolaridade,analfabeto/infantil,36,9,25.0,48.4,5
+2024,saúde,escolaridade,fundamental,978,217,22.2,18.3,56
+2024,saúde,escolaridade,médio,2128,508,23.9,26.6,168
+2024,saúde,escolaridade,superior,913,271,29.7,27.4,38
+2024,saúde,regiao,Sudeste,559,159,28.4,26.0,57
+2024,saúde,regiao,Nordeste,1322,289,21.9,25.4,339
+2024,saúde,regiao,Sul,546,187,34.2,28.4,89
+2024,saúde,regiao,Norte,1116,217,19.4,18.0,122
+2024,saúde,regiao,Centro-Oeste,512,153,29.9,25.2,48
+2024,educação,renda_familiar,até 1 SM,651,181,27.8,34.5,51
+2024,educação,renda_familiar,1 a 2 SM,680,236,34.7,36.6,47
+2024,educação,renda_familiar,2 a 3 SM,488,199,40.8,35.1,22
+2024,educação,renda_familiar,3 a 5 SM,268,128,47.8,60.2,18
+2024,educação,renda_familiar,5 a 10 SM,143,61,42.7,35.6,27
+2024,educação,renda_familiar,mais de 10 SM,42,22,52.4,23.7,3
+2024,educação,renda_familiar,não tem renda,23,8,34.8,48.8,6
+2024,educação,raca,branca,580,238,41.0,39.6,33
+2024,educação,raca,preta,376,131,34.8,35.3,10
+2024,educação,raca,parda,1336,472,35.3,34.7,77
+2024,educação,raca,amarela,70,17,24.3,33.6,14
+2024,educação,raca,indígena,61,19,31.1,18.7,5
+2024,educação,escolaridade,analfabeto/infantil,5,1,20.0,53.7,3
+2024,educação,escolaridade,fundamental,216,52,24.1,16.2,14
+2024,educação,escolaridade,médio,1420,455,32.0,38.5,82
+2024,educação,escolaridade,superior,798,371,46.5,36.2,31
+2024,educação,regiao,Sudeste,276,119,43.1,32.6,30
+2024,educação,regiao,Nordeste,778,229,29.4,28.9,179
+2024,educação,regiao,Sul,227,108,47.6,55.2,29
+2024,educação,regiao,Norte,868,285,32.8,30.3,98
+2024,educação,regiao,Centro-Oeste,290,138,47.6,52.9,89
+2024,trabalho,renda_familiar,até 1 SM,829,189,22.8,19.4,113
+2024,trabalho,renda_familiar,1 a 2 SM,952,316,33.2,44.7,70
+2024,trabalho,renda_familiar,2 a 3 SM,686,256,37.3,36.3,93
+2024,trabalho,renda_familiar,3 a 5 SM,417,174,41.7,40.3,79
+2024,trabalho,renda_familiar,5 a 10 SM,217,99,45.6,46.9,43
+2024,trabalho,renda_familiar,mais de 10 SM,59,26,44.1,70.2,7
+2024,trabalho,renda_familiar,não tem renda,35,5,14.3,32.9,8
+2024,trabalho,raca,branca,883,334,37.8,40.9,138
+2024,trabalho,raca,preta,490,150,30.6,32.4,12
+2024,trabalho,raca,parda,1787,575,32.2,39.3,174
+2024,trabalho,raca,amarela,81,25,30.9,43.9,14
+2024,trabalho,raca,indígena,62,24,38.7,18.9,6
+2024,trabalho,escolaridade,analfabeto/infantil,17,4,23.5,7.5,2
+2024,trabalho,escolaridade,fundamental,675,156,23.1,31.9,53
+2024,trabalho,escolaridade,médio,1776,588,33.1,38.8,193
+2024,trabalho,escolaridade,superior,866,367,42.4,39.7,44
+2024,trabalho,regiao,Sudeste,507,218,43.0,43.6,54
+2024,trabalho,regiao,Nordeste,1013,251,24.8,22.8,202
+2024,trabalho,regiao,Sul,453,183,40.4,42.0,93
+2024,trabalho,regiao,Norte,958,293,30.6,28.1,102
+2024,trabalho,regiao,Centro-Oeste,403,170,42.2,45.5,70
+2024,impostos,renda_familiar,até 1 SM,407,128,31.4,37.8,105
+2024,impostos,renda_familiar,1 a 2 SM,656,285,43.4,47.5,81
+2024,impostos,renda_familiar,2 a 3 SM,646,345,53.4,53.1,45
+2024,impostos,renda_familiar,3 a 5 SM,562,339,60.3,60.6,54
+2024,impostos,renda_familiar,5 a 10 SM,365,237,64.9,66.7,48
+2024,impostos,renda_familiar,mais de 10 SM,116,85,73.3,81.4,14
+2024,impostos,renda_familiar,não tem renda,15,8,53.3,57.6,5
+2024,impostos,raca,branca,950,568,59.8,64.4,116
+2024,impostos,raca,preta,393,180,45.8,32.9,11
+2024,impostos,raca,parda,1462,707,48.4,54.6,114
+2024,impostos,raca,amarela,67,36,53.7,67.7,15
+2024,impostos,raca,indígena,56,28,50.0,52.7,10
+2024,impostos,escolaridade,analfabeto/infantil,6,3,50.0,41.7,3
+2024,impostos,escolaridade,fundamental,356,130,36.5,39.5,27
+2024,impostos,escolaridade,médio,1339,595,44.4,46.4,111
+2024,impostos,escolaridade,superior,1246,800,64.2,62.6,74
+2024,impostos,regiao,Sudeste,449,277,61.7,56.6,56
+2024,impostos,regiao,Nordeste,800,318,39.8,34.7,161
+2024,impostos,regiao,Sul,481,322,66.9,66.9,81
+2024,impostos,regiao,Norte,770,330,42.9,34.6,117
+2024,impostos,regiao,Centro-Oeste,447,281,62.9,65.3,88
+2024,polícia,renda_familiar,até 1 SM,296,91,30.7,60.2,6
+2024,polícia,renda_familiar,1 a 2 SM,315,116,36.8,48.3,47
+2024,polícia,renda_familiar,2 a 3 SM,251,105,41.8,53.0,20
+2024,polícia,renda_familiar,3 a 5 SM,166,87,52.4,49.0,52
+2024,polícia,renda_familiar,5 a 10 SM,101,60,59.4,51.9,22
+2024,polícia,renda_familiar,mais de 10 SM,34,17,50.0,50.9,10
+2024,polícia,renda_familiar,não tem renda,14,4,28.6,15.2,4
+2024,polícia,raca,branca,335,158,47.2,58.0,30
+2024,polícia,raca,preta,184,70,38.0,19.3,3
+2024,polícia,raca,parda,656,249,38.0,50.9,61
+2024,polícia,raca,amarela,23,9,39.1,32.2,7
+2024,polícia,raca,indígena,28,9,32.1,22.4,8
+2024,polícia,escolaridade,analfabeto/infantil,3,2,66.7,98.3,1
+2024,polícia,escolaridade,fundamental,192,51,26.6,19.7,31
+2024,polícia,escolaridade,médio,631,229,36.3,54.5,38
+2024,polícia,escolaridade,superior,408,215,52.7,43.6,14
+2024,polícia,regiao,Sudeste,177,78,44.1,41.8,12
+2024,polícia,regiao,Nordeste,335,110,32.8,30.2,60
+2024,polícia,regiao,Sul,164,98,59.8,74.9,20
+2024,polícia,regiao,Norte,398,140,35.2,30.7,49
+2024,polícia,regiao,Centro-Oeste,160,71,44.4,45.7,34
+2024,transporte,renda_familiar,até 1 SM,319,76,23.8,34.1,49
+2024,transporte,renda_familiar,1 a 2 SM,357,129,36.1,32.4,30
+2024,transporte,renda_familiar,2 a 3 SM,283,115,40.6,30.5,11
+2024,transporte,renda_familiar,3 a 5 SM,176,74,42.0,67.5,14
+2024,transporte,renda_familiar,5 a 10 SM,84,37,44.0,39.8,16
+2024,transporte,renda_familiar,mais de 10 SM,35,14,40.0,14.6,3
+2024,transporte,renda_familiar,não tem renda,7,3,42.9,46.4,5
+2024,transporte,raca,branca,355,152,42.8,44.6,20
+2024,transporte,raca,preta,210,85,40.5,27.4,6
+2024,transporte,raca,parda,687,207,30.1,32.4,49
+2024,transporte,raca,amarela,23,10,43.5,58.9,11
+2024,transporte,raca,indígena,24,4,16.7,9.5,8
+2024,transporte,escolaridade,analfabeto/infantil,7,2,28.6,80.6,2
+2024,transporte,escolaridade,fundamental,223,62,27.8,23.3,14
+2024,transporte,escolaridade,médio,692,224,32.4,39.6,58
+2024,transporte,escolaridade,superior,388,177,45.6,34.7,16
+2024,transporte,regiao,Sudeste,239,104,43.5,32.4,22
+2024,transporte,regiao,Nordeste,375,88,23.5,22.8,86
+2024,transporte,regiao,Sul,214,111,51.9,56.7,36
+2024,transporte,regiao,Norte,325,93,28.6,36.2,33
+2024,transporte,regiao,Centro-Oeste,157,69,43.9,40.7,52
+2025,documentos,renda_familiar,até 1 SM,1451,356,24.5,25.3,232
+2025,documentos,renda_familiar,1 a 2 SM,1454,412,28.3,31.8,215
+2025,documentos,renda_familiar,2 a 3 SM,885,285,32.2,33.4,113
+2025,documentos,renda_familiar,3 a 5 SM,623,241,38.7,42.6,56
+2025,documentos,renda_familiar,5 a 10 SM,333,131,39.3,37.2,50
+2025,documentos,renda_familiar,mais de 10 SM,122,53,43.4,39.1,25
+2025,documentos,renda_familiar,não tem renda,47,12,25.5,45.0,9
+2025,documentos,raca,branca,1265,471,37.2,41.1,155
+2025,documentos,raca,preta,805,257,31.9,35.7,106
+2025,documentos,raca,parda,2829,772,27.3,28.6,272
+2025,documentos,raca,amarela,123,37,30.1,51.5,17
+2025,documentos,raca,indígena,85,27,31.8,33.3,16
+2025,documentos,escolaridade,analfabeto/infantil,26,7,26.9,24.6,11
+2025,documentos,escolaridade,fundamental,1037,247,23.8,27.5,162
+2025,documentos,escolaridade,médio,2876,838,29.1,32.3,337
+2025,documentos,escolaridade,superior,1202,477,39.7,40.0,145
+2025,documentos,regiao,Sudeste,760,281,37.0,35.7,138
+2025,documentos,regiao,Nordeste,1526,376,24.6,28.4,285
+2025,documentos,regiao,Sul,656,276,42.1,46.9,135
+2025,documentos,regiao,Norte,1495,405,27.1,23.8,170
+2025,documentos,regiao,Centro-Oeste,704,231,32.8,33.2,188
+2025,saúde,renda_familiar,até 1 SM,1988,332,16.7,17.1,158
+2025,saúde,renda_familiar,1 a 2 SM,1724,335,19.4,22.6,292
+2025,saúde,renda_familiar,2 a 3 SM,892,187,21.0,18.6,113
+2025,saúde,renda_familiar,3 a 5 SM,594,159,26.8,29.8,70
+2025,saúde,renda_familiar,5 a 10 SM,294,84,28.6,28.7,43
+2025,saúde,renda_familiar,mais de 10 SM,85,22,25.9,30.7,19
+2025,saúde,renda_familiar,não tem renda,81,15,18.5,20.8,16
+2025,saúde,raca,branca,1534,365,23.8,30.4,231
+2025,saúde,raca,preta,889,170,19.1,19.7,122
+2025,saúde,raca,parda,3230,609,18.9,18.6,288
+2025,saúde,raca,amarela,142,28,19.7,24.1,17
+2025,saúde,raca,indígena,108,19,17.6,34.7,18
+2025,saúde,escolaridade,analfabeto/infantil,73,7,9.6,11.3,16
+2025,saúde,escolaridade,fundamental,1703,292,17.1,17.8,170
+2025,saúde,escolaridade,médio,3112,628,20.2,21.3,340
+2025,saúde,escolaridade,superior,1089,277,25.4,28.8,166
+2025,saúde,regiao,Sudeste,908,206,22.7,21.0,166
+2025,saúde,regiao,Nordeste,1817,331,18.2,21.9,351
+2025,saúde,regiao,Sul,850,229,26.9,30.6,172
+2025,saúde,regiao,Norte,1541,276,17.9,19.8,208
+2025,saúde,regiao,Centro-Oeste,861,162,18.8,21.0,172
+2025,educação,renda_familiar,até 1 SM,855,277,32.4,31.7,100
+2025,educação,renda_familiar,1 a 2 SM,823,273,33.2,33.4,164
+2025,educação,renda_familiar,2 a 3 SM,441,190,43.1,39.4,51
+2025,educação,renda_familiar,3 a 5 SM,320,148,46.2,35.4,30
+2025,educação,renda_familiar,5 a 10 SM,167,69,41.3,31.2,22
+2025,educação,renda_familiar,mais de 10 SM,55,32,58.2,67.1,22
+2025,educação,renda_familiar,não tem renda,39,13,33.3,27.8,7
+2025,educação,raca,branca,633,275,43.4,42.5,106
+2025,educação,raca,preta,463,168,36.3,34.3,77
+2025,educação,raca,parda,1623,572,35.2,34.7,144
+2025,educação,raca,amarela,66,23,34.8,27.8,10
+2025,educação,raca,indígena,56,19,33.9,21.5,10
+2025,educação,escolaridade,analfabeto/infantil,2,0,0.0,0.0,1
+2025,educação,escolaridade,fundamental,317,74,23.3,23.1,47
+2025,educação,escolaridade,médio,1752,623,35.6,35.1,203
+2025,educação,escolaridade,superior,786,362,46.1,41.3,94
+2025,educação,regiao,Sudeste,314,125,39.8,27.1,55
+2025,educação,regiao,Nordeste,856,297,34.7,37.8,209
+2025,educação,regiao,Sul,335,158,47.2,58.3,79
+2025,educação,regiao,Norte,959,337,35.1,27.1,126
+2025,educação,regiao,Centro-Oeste,393,142,36.1,34.4,92
+2025,trabalho,renda_familiar,até 1 SM,1259,335,26.6,31.5,131
+2025,trabalho,renda_familiar,1 a 2 SM,1299,413,31.8,35.2,216
+2025,trabalho,renda_familiar,2 a 3 SM,753,272,36.1,33.4,97
+2025,trabalho,renda_familiar,3 a 5 SM,532,229,43.0,36.9,65
+2025,trabalho,renda_familiar,5 a 10 SM,247,116,47.0,53.4,20
+2025,trabalho,renda_familiar,mais de 10 SM,81,41,50.6,29.2,17
+2025,trabalho,renda_familiar,não tem renda,51,13,25.5,11.6,10
+2025,trabalho,raca,branca,1124,400,35.6,38.8,132
+2025,trabalho,raca,preta,683,218,31.9,36.6,94
+2025,trabalho,raca,parda,2373,779,32.8,35.8,222
+2025,trabalho,raca,amarela,108,38,35.2,46.5,14
+2025,trabalho,raca,indígena,81,26,32.1,19.2,15
+2025,trabalho,escolaridade,analfabeto/infantil,43,4,9.3,0.8,5
+2025,trabalho,escolaridade,fundamental,1067,246,23.1,25.9,126
+2025,trabalho,escolaridade,médio,2358,817,34.6,38.2,278
+2025,trabalho,escolaridade,superior,946,407,43.0,41.1,111
+2025,trabalho,regiao,Sudeste,697,256,36.7,37.1,112
+2025,trabalho,regiao,Nordeste,1296,372,28.7,32.2,297
+2025,trabalho,regiao,Sul,663,279,42.1,43.9,133
+2025,trabalho,regiao,Norte,1176,365,31.0,34.6,127
+2025,trabalho,regiao,Centro-Oeste,582,202,34.7,37.5,182
+2025,impostos,renda_familiar,até 1 SM,664,242,36.4,37.7,81
+2025,impostos,renda_familiar,1 a 2 SM,987,456,46.2,46.1,128
+2025,impostos,renda_familiar,2 a 3 SM,742,381,51.3,60.2,105
+2025,impostos,renda_familiar,3 a 5 SM,674,395,58.6,63.2,89
+2025,impostos,renda_familiar,5 a 10 SM,418,281,67.2,74.9,49
+2025,impostos,renda_familiar,mais de 10 SM,174,120,69.0,69.3,39
+2025,impostos,renda_familiar,não tem renda,29,12,41.4,54.4,5
+2025,impostos,raca,branca,1189,709,59.6,68.7,158
+2025,impostos,raca,preta,507,261,51.5,58.6,64
+2025,impostos,raca,parda,1993,934,46.9,54.8,221
+2025,impostos,raca,amarela,102,48,47.1,61.5,14
+2025,impostos,raca,indígena,53,24,45.3,26.5,6
+2025,impostos,escolaridade,analfabeto/infantil,16,5,31.2,38.8,8
+2025,impostos,escolaridade,fundamental,613,246,40.1,53.4,81
+2025,impostos,escolaridade,médio,1878,877,46.7,50.3,256
+2025,impostos,escolaridade,superior,1368,861,62.9,69.8,179
+2025,impostos,regiao,Sudeste,671,397,59.2,64.9,123
+2025,impostos,regiao,Nordeste,956,411,43.0,43.6,172
+2025,impostos,regiao,Sul,680,444,65.3,71.5,150
+2025,impostos,regiao,Norte,982,428,43.6,47.6,143
+2025,impostos,regiao,Centro-Oeste,586,309,52.7,60.0,118
+2025,polícia,renda_familiar,até 1 SM,389,126,32.4,31.4,43
+2025,polícia,renda_familiar,1 a 2 SM,449,167,37.2,33.0,96
+2025,polícia,renda_familiar,2 a 3 SM,263,103,39.2,33.7,29
+2025,polícia,renda_familiar,3 a 5 SM,196,95,48.5,38.0,21
+2025,polícia,renda_familiar,5 a 10 SM,113,56,49.6,46.6,32
+2025,polícia,renda_familiar,mais de 10 SM,50,26,52.0,28.8,8
+2025,polícia,renda_familiar,não tem renda,18,5,27.8,36.5,7
+2025,polícia,raca,branca,395,167,42.3,42.9,81
+2025,polícia,raca,preta,245,93,38.0,36.7,33
+2025,polícia,raca,parda,827,314,38.0,32.1,71
+2025,polícia,raca,amarela,29,11,37.9,60.6,3
+2025,polícia,raca,indígena,27,11,40.7,10.7,4
+2025,polícia,escolaridade,analfabeto/infantil,12,2,16.7,5.6,2
+2025,polícia,escolaridade,fundamental,280,72,25.7,28.7,61
+2025,polícia,escolaridade,médio,794,293,36.9,30.6,107
+2025,polícia,escolaridade,superior,449,232,51.7,43.0,69
+2025,polícia,regiao,Sudeste,208,76,36.5,29.3,46
+2025,polícia,regiao,Nordeste,404,134,33.2,32.9,89
+2025,polícia,regiao,Sul,245,127,51.8,54.7,80
+2025,polícia,regiao,Norte,438,158,36.1,38.6,67
+2025,polícia,regiao,Centro-Oeste,240,104,43.3,45.2,69
+2025,transporte,renda_familiar,até 1 SM,626,182,29.1,32.7,81
+2025,transporte,renda_familiar,1 a 2 SM,685,225,32.8,33.6,59
+2025,transporte,renda_familiar,2 a 3 SM,398,142,35.7,39.7,42
+2025,transporte,renda_familiar,3 a 5 SM,266,127,47.7,50.6,41
+2025,transporte,renda_familiar,5 a 10 SM,137,64,46.7,42.5,37
+2025,transporte,renda_familiar,mais de 10 SM,47,22,46.8,49.8,7
+2025,transporte,renda_familiar,não tem renda,34,14,41.2,26.8,2
+2025,transporte,raca,branca,658,273,41.5,45.0,97
+2025,transporte,raca,preta,388,112,28.9,44.0,45
+2025,transporte,raca,parda,1171,392,33.5,31.6,101
+2025,transporte,raca,amarela,36,14,38.9,46.2,3
+2025,transporte,raca,indígena,29,9,31.0,18.2,4
+2025,transporte,escolaridade,analfabeto/infantil,12,2,16.7,20.9,9
+2025,transporte,escolaridade,fundamental,442,135,30.5,31.8,66
+2025,transporte,escolaridade,médio,1284,433,33.7,35.5,121
+2025,transporte,escolaridade,superior,561,235,41.9,44.3,91
+2025,transporte,regiao,Sudeste,469,177,37.7,38.1,88
+2025,transporte,regiao,Nordeste,577,173,30.0,36.4,104
+2025,transporte,regiao,Sul,434,189,43.5,44.5,86
+2025,transporte,regiao,Norte,462,123,26.6,21.8,98
+2025,transporte,regiao,Centro-Oeste,357,143,40.1,42.8,95
+2025,justiça,renda_familiar,até 1 SM,690,162,23.5,33.4,62
+2025,justiça,renda_familiar,1 a 2 SM,652,198,30.4,37.2,102
+2025,justiça,renda_familiar,2 a 3 SM,350,121,34.6,35.7,41
+2025,justiça,renda_familiar,3 a 5 SM,306,130,42.5,51.9,26
+2025,justiça,renda_familiar,5 a 10 SM,188,96,51.1,49.6,42
+2025,justiça,renda_familiar,mais de 10 SM,73,41,56.2,41.0,14
+2025,justiça,renda_familiar,não tem renda,34,7,20.6,16.8,12
+2025,justiça,raca,branca,605,240,39.7,50.9,57
+2025,justiça,raca,preta,386,127,32.9,48.5,46
+2025,justiça,raca,parda,1315,408,31.0,34.0,118
+2025,justiça,raca,amarela,52,17,32.7,62.3,5
+2025,justiça,raca,indígena,46,6,13.0,7.1,7
+2025,justiça,escolaridade,analfabeto/infantil,21,1,4.8,0.3,3
+2025,justiça,escolaridade,fundamental,514,110,21.4,37.2,52
+2025,justiça,escolaridade,médio,1234,395,32.0,35.9,141
+2025,justiça,escolaridade,superior,643,294,45.7,49.4,66
+2025,justiça,regiao,Sudeste,368,131,35.6,45.9,61
+2025,justiça,regiao,Nordeste,596,158,26.5,25.0,151
+2025,justiça,regiao,Sul,374,161,43.0,48.8,76
+2025,justiça,regiao,Norte,698,207,29.7,35.7,103
+2025,justiça,regiao,Centro-Oeste,376,143,38.0,43.1,58

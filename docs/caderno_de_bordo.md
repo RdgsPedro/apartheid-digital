@@ -33,9 +33,9 @@
 Têm que ser fechadas antes dos testes do notebook 03. As propostas estão no plano do código e esperam o grupo aprovar.
 
 1. **Medida principal:** G2 entre quem tentou, G1, ou as duas. Proposta: G2 como principal, sempre com o G1 ao lado.
-2. **Código 7 da renda ("não tem renda"):** grupo próprio ou junto com "até 1 SM". Proposta: grupo próprio, se tiver pessoas suficientes.
-3. **Grupos do gap:** as pontas na renda e na escolaridade; branca e Sudeste como referência em raça e região.
-4. **Grupos pequenos (amarela e indígena):** proposta de sempre mostrar a estimativa, com aviso se o CV passar de 30%, e tirar do teste se o n sem peso ficar abaixo de 50. Juntar com outro grupo, nunca.
+2. **Código 7 da renda ("não tem renda"):** grupo próprio ou junto com "até 1 SM". Proposta: grupo próprio, se tiver pessoas suficientes. O notebook 02 mostrou que, na maioria das áreas e anos, não tem (ver 11 e 12/10).
+3. **Grupos do gap:** as pontas na renda e na escolaridade; branca e Sudeste como referência em raça e região. As pontas da renda são frágeis em várias áreas (ver 11 e 12/10).
+4. **Grupos pequenos (amarela e indígena):** proposta de sempre mostrar a estimativa, com aviso se o CV passar de 30%, e tirar do teste se o n sem peso ficar abaixo de 50. Juntar com outro grupo, nunca. O notebook 02 mostrou que o n sozinho não basta: a regra deve usar o n efetivo ou o CV (ver 11 e 12/10).
 5. **Correção dos p-valores:** proposta de Holm, por ano (28 testes = 7 áreas × 4 dimensões).
 6. **Ano a ano ou empilhado:** proposta de ano a ano como principal e os 3 anos empilhados como complementar.
 7. **Bases complementares (OuvidoriaSUS e Fala.BR):** no máximo como validação cruzada por região. Uso ainda não confirmado.
@@ -183,12 +183,37 @@ Têm que ser fechadas antes dos testes do notebook 03. As propostas estão no pl
 - **Material de estudo:** o notebook foi reescrito com comentários linha por linha, pra servir de material de estudo do grupo.
 - **Rodado com os dados reais:** 75.008 domicílios e 66.976 pessoas, os mesmos totais de 21/09, e todos os testes passaram.
 
+### 11 e 12/10/2026: notebook 02 (análise exploratória)
+
+- **Leitura guiada do notebook 01:** concluída (seções 1 a 13).
+- **Notebook 02:** commit de 11/10 ("Notebook 02: tabelas por grupo, n efetivo e tabelao"), junto com a lista de variáveis atualizada. Em 12/10 ele foi reorganizado no formato do 01: 15 seções, comentários linha por linha e testes de integridade.
+- **O que o notebook 02 faz:**
+    - contagem por área e ano, com % sem peso, % com peso e n efetivo;
+    - tabelas por grupo (renda, raça, escolaridade e região), com a função `tabela_por_grupo`;
+    - o "tabelão": 462 linhas (22 combinações de ano e área × 21 categorias);
+    - o gráfico do gap da renda, com e sem peso.
+- **Saídas em `outputs/`:** `tabelao_eda.csv`, `gap_renda_pct_com_peso.png` e `gap_renda_pct_sem_peso.png`. São exploratórias: não têm margem de erro.
+- **Filtro do G2 conferido:** nas 22 combinações de ano e área, ninguém responde o G2 sem ter dito que tentou (G1 = 1). Então todo % do G2 é "entre quem tentou".
+- **n efetivo (Kish):** (soma dos pesos)² ÷ (soma de cada peso ao quadrado). Diz quantas pessoas um grupo vale de verdade, considerando os pesos. A margem de erro depende dele, e não do n.
+
+**Achados**
+1. **O peso muda o %** em até ~11 p.p. (transporte 2023: 31,7 sem peso e 42,5 com peso). Entre as 1.639 pessoas que responderam transporte em 2023, a mais pesada sozinha tem 9,3% do peso.
+2. **Grupos frágeis:** "não tem renda" em saúde 2024 tem 53 pessoas, mas n efetivo ≈ 3. Uma pessoa tem 57% do peso do grupo e respondeu 0, e o % cai de 20,8 (sem peso) para 6,3 (com peso). No tabelão, 63 das 462 linhas têm n efetivo menor que 10, quase sempre analfabeto/infantil, indígena, não tem renda e mais de 10 SM.
+3. **A regra "n ≥ 50" não basta:** 20 linhas passam nela com n efetivo menor que 10. Ex.: polícia 2024, "até 1 SM": 296 pessoas, n efetivo 6, e o % vai de 30,7 para 60,2 com peso.
+4. **A régua muda a resposta:** em impostos 2024, a dimensão com maior diferença (maior − menor % com peso) é a renda com corte n efetivo ≥ 10 e a região com corte ≥ 20. Com o corte 10, as pontas da raça eram justamente os grupos mais frágeis (amarela e preta).
+5. **Gap da renda** (mais de 10 SM − até 1 SM): sem peso, positivo em todas as áreas e anos (9 a 42 p.p.); com peso, negativo em educação 2024, polícia 2024 e 2025, trabalho 2025 e transporte 2024, sempre com uma ponta frágil. Impostos é a única área com gap grande e estável nas duas medidas (com peso: 47,0, 43,6 e 31,6 p.p.).
+6. **Ideia pra testar no notebook 03:** juntar "5 a 10 SM" e "mais de 10 SM" na ponta de cima. Num teste rápido, o n efetivo dessa ponta em impostos 2024 subiu de 14 para 61, mas os gaps negativos de 2024 não sumiram.
+
+**O que muda nas decisões em aberto**
+- **Decisão 2 ("não tem renda"):** o grupo tem n efetivo menor que 10 em 15 das 22 combinações de ano e área. Argumento para juntar com "até 1 SM" ou deixar fora do teste.
+- **Decisão 3 (grupos do gap):** comparar grupos fixos, nunca "maior − menor", porque os extremos tendem a ser os grupos frágeis. Atenção às pontas da renda.
+- **Decisão 4 (grupos pequenos):** a regra deve olhar o n efetivo ou o CV, e não só o n, e ser fixada antes dos testes, como o α.
+
 ---
 
 ## Próximos passos
 
-1. Rodar o notebook 01 novo em cada computador do grupo e fazer o commit.
-2. Fechar as decisões em aberto e registrar aqui.
-3. Notebook 02 (EDA): contagens, valores faltantes, n por grupo e por área, e as primeiras proporções ponderadas.
-4. Notebook 03: validação das réplicas contra as tabelas oficiais e depois os testes de Rao-Scott, o gap com IC, o V de Cramér e a correção dos p-valores.
-5. Exportar as tabelas pro Power BI e escrever os resultados.
+1. Rodar os notebooks 01 e 02 em cada computador do grupo, com Restart + Run All.
+2. Fechar as decisões em aberto, principalmente a 2, a 3 e a 4, à luz do notebook 02, e registrar aqui.
+3. Notebook 03: validar as réplicas contra as tabelas oficiais da CETIC (2024 e 2025); depois a margem de erro (IC) de cada % e de cada gap, o Rao-Scott, o V de Cramér e a correção dos p-valores.
+4. Exportar as tabelas pro Power BI e escrever os resultados.
