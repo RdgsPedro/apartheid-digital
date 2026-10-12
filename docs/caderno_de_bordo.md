@@ -14,31 +14,33 @@
 | Base de dados | Microdados da TIC Domicílios (CETIC.br/NIC.br), módulos domicílios e indivíduos | até 24/08 |
 | Recorte | 2023, 2024 e 2025 (opção 2 da professora: últimos 3 anos com mais variáveis) | até 24/08 |
 | Variável central | G2_X (fez o serviço inteiro pela internet), com o G1_X (tentou) como par de cada área | até 24/08 |
+| Universo da análise | G1 e G2 só entre usuários de Internet de 16 anos ou mais (`usuario_internet` = 1, a `F_C3_IDADE` da CETIC), o mesmo universo das tabelas oficiais | 12/10 |
 | Áreas do ranking | 7 áreas, de A a G. Justiça (H) só existe em 2025 e entra à parte. Finanças vem da C8_H, outra pergunta, e fica fora do ranking | 21/09 (H) e 03/10 (finanças) |
 | Religião | `RELIGIAO` não é usada | até 24/08 |
 | G2 em 0/1 | 1 = fez tudo online; 2 (precisou ir ao posto) e 3 (só procurou informação) = 0; 97/98/99 = NaN | 07/09 |
 | Peso | Qualquer conta com G1 ou G2 usa o peso do indivíduo e as réplicas do indivíduo, mesmo cruzando com renda ou região | 21/09 |
-| Réplicas | 200 réplicas bootstrap do indivíduo, num arquivo separado e fora do Git | 21/09 |
+| Réplicas | 200 réplicas bootstrap do indivíduo, num arquivo separado e fora do Git. No arquivo bruto de 2023 elas vêm como contagens do sorteio, e o notebook 01 multiplica cada uma pelo `PESO` | 21/09 (contagens de 2023: 12/10) |
+| Margem de erro | EP = desvio padrão das 200 réplicas; margem = 1,96 × EP. Em 2024 e 2025, a margem é multiplicada por 1,054 e 1,140, o fator constante que reproduz as margens oficiais; 2023 fica sem fator | 12/10 |
 | Nível de significância | α = 0,05, fixado antes de qualquer teste | 07/09 |
-| Teste | Rao-Scott de 2ª ordem, e não um qui-quadrado simples | 07/09 |
+| Teste | Rao-Scott de 2ª ordem, e não um qui-quadrado simples. Feito pelo `svy`, conferido contra o `svychisq` do pacote `survey` do R (resultado idêntico nos 88 testes) | 07/09 (conferência: 12/10) |
 | Ferramenta | `svy` (Python), fixo na versão 0.31.0; o pacote `survey` do R fica de plano B | até 02/10 (versão fixada em 10/10) |
 | Códigos 97/98/99 | Viram NaN, com duas exceções: velocidade e valor da conexão (linhas abaixo) | 21/09 e 10/10 |
-| Renda | 97 e 98 viram NaN; o 7 ("não tem renda") fica como código próprio | 10/10 |
+| Renda | 97 e 98 viram NaN; o 7 ("não tem renda") fica como código próprio nos dados (na análise ele entra junto com "até 1 SM", ver "Faixas na análise") | 10/10 |
 | Velocidade | 5 categorias usando o tipo de conexão (A7): `baixa`, `media`, `alta`, `movel` e `sem internet`; discada e não sabe viram NaN | 10/10 (substitui a regra de 21/09) |
 | Valor da conexão | 97/98/99 viram NaN; "não paga nada" vira o código 0 nos 3 anos | 10/10 |
 | Fontes do artigo | Só autores de pós-graduação em diante; estado da arte com textos de 2021 em diante | 02/10 |
+| Medida principal | G2 entre quem tentou (G1 = 1) como medida principal, sempre com o G1 ao lado | 12/10 |
+| Faixas na análise | Renda em 5 faixas: até 1 SM (junto com o 7, "não tem renda"), 1 a 2, 2 a 3, 3 a 5 e mais de 5 SM. Escolaridade em 3: até fundamental (junto com analfabeto/infantil), médio e superior | 12/10 |
+| Grupos do gap | Sempre grupos fixos, nunca "maior − menor". Renda: até 1 SM × mais de 5 SM. Escolaridade: até fundamental × superior. Raça: branca × preta e branca × parda. Região: Sudeste × cada uma das outras quatro | 12/10 |
+| Grupos pequenos | Toda estimativa sai com IC, e com aviso quando o CV passa de 30%. Nos testes, as categorias são as mesmas em todas as áreas e anos; amarela e indígena ficam fora dos testes (aparecem à parte, com IC e aviso) e nunca são juntadas a outro grupo | 12/10 |
+| Correção dos p-valores | Holm, por ano: 28 testes (7 áreas × 4 dimensões); justiça à parte | 12/10 |
+| Ano a ano ou empilhado | Ano a ano como principal; os 3 anos empilhados como complemento | 12/10 |
 
 ## Decisões em aberto
 
-Têm que ser fechadas antes dos testes do notebook 03. As propostas estão no plano do código e esperam o grupo aprovar.
+As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima. Elas foram aprovadas pelo Pedro; falta a confirmação do Vitor e do Eduardo. As duas decisões novas de 12/10 à tarde também precisam da confirmação do grupo: o universo da análise já está nos notebooks 01 e 02, e a margem de erro entra no notebook 03.
 
-1. **Medida principal:** G2 entre quem tentou, G1, ou as duas. Proposta: G2 como principal, sempre com o G1 ao lado.
-2. **Código 7 da renda ("não tem renda"):** grupo próprio ou junto com "até 1 SM". Proposta: grupo próprio, se tiver pessoas suficientes. O notebook 02 mostrou que, na maioria das áreas e anos, não tem (ver 11 e 12/10).
-3. **Grupos do gap:** as pontas na renda e na escolaridade; branca e Sudeste como referência em raça e região. As pontas da renda são frágeis em várias áreas (ver 11 e 12/10).
-4. **Grupos pequenos (amarela e indígena):** proposta de sempre mostrar a estimativa, com aviso se o CV passar de 30%, e tirar do teste se o n sem peso ficar abaixo de 50. Juntar com outro grupo, nunca. O notebook 02 mostrou que o n sozinho não basta: a regra deve usar o n efetivo ou o CV (ver 11 e 12/10).
-5. **Correção dos p-valores:** proposta de Holm, por ano (28 testes = 7 áreas × 4 dimensões).
-6. **Ano a ano ou empilhado:** proposta de ano a ano como principal e os 3 anos empilhados como complementar.
-7. **Bases complementares (OuvidoriaSUS e Fala.BR):** no máximo como validação cruzada por região. Uso ainda não confirmado.
+1. **Bases complementares (OuvidoriaSUS e Fala.BR):** no máximo como validação cruzada por região. Uso ainda não confirmado; não trava o notebook 03.
 
 ---
 
@@ -197,6 +199,9 @@ Têm que ser fechadas antes dos testes do notebook 03. As propostas estão no pl
 - **n efetivo (Kish):** (soma dos pesos)² ÷ (soma de cada peso ao quadrado). Diz quantas pessoas um grupo vale de verdade, considerando os pesos. A margem de erro depende dele, e não do n.
 
 **Achados**
+
+*Números de antes do filtro do universo. Os atualizados estão na entrada de 12/10 à tarde.*
+
 1. **O peso muda o %** em até ~11 p.p. (transporte 2023: 31,7 sem peso e 42,5 com peso). Entre as 1.639 pessoas que responderam transporte em 2023, a mais pesada sozinha tem 9,3% do peso.
 2. **Grupos frágeis:** "não tem renda" em saúde 2024 tem 53 pessoas, mas n efetivo ≈ 3. Uma pessoa tem 57% do peso do grupo e respondeu 0, e o % cai de 20,8 (sem peso) para 6,3 (com peso). No tabelão, 63 das 462 linhas têm n efetivo menor que 10, quase sempre analfabeto/infantil, indígena, não tem renda e mais de 10 SM.
 3. **A regra "n ≥ 50" não basta:** 20 linhas passam nela com n efetivo menor que 10. Ex.: polícia 2024, "até 1 SM": 296 pessoas, n efetivo 6, e o % vai de 30,7 para 60,2 com peso.
@@ -209,11 +214,77 @@ Têm que ser fechadas antes dos testes do notebook 03. As propostas estão no pl
 - **Decisão 3 (grupos do gap):** comparar grupos fixos, nunca "maior − menor", porque os extremos tendem a ser os grupos frágeis. Atenção às pontas da renda.
 - **Decisão 4 (grupos pequenos):** a regra deve olhar o n efetivo ou o CV, e não só o n, e ser fixada antes dos testes, como o α.
 
+### 12/10/2026: decisões para o notebook 03
+
+- As decisões 1 a 6 que estavam em aberto foram fechadas com base no que o notebook 02 mostrou (ver "Decisões em vigor"). Os números desta entrada são de antes do filtro do universo (ver a entrada seguinte).
+- **Por que juntar faixas:** o "não tem renda", o "mais de 10 SM" e o "analfabeto/infantil" são frágeis na maioria das áreas e anos. Com as faixas novas (renda em 5, escolaridade em 3), as linhas com n efetivo menor que 10 caem de 63 de 462 (14%) para 26 de 396 (7%), e quase todas as que sobram são de amarela e indígena.
+- **Por que a regra dos grupos pequenos não é célula por célula:**
+    - Uma regra que tira categorias célula por célula (pelo n, pelo n efetivo ou pelo CV) faz cada área ter categorias diferentes, e aí os testes e o ranking deixam de ser comparáveis entre as áreas.
+    - Uma regra pelo CV tira com mais frequência os grupos com % baixo, que são justamente os mais desfavorecidos, e isso distorce a comparação.
+    - Por isso as categorias dos testes são fixas. Amarela e indígena ficam fora porque são frágeis em quase tudo: com as faixas novas, a indígena tem n efetivo menor que 20 em 22 das 22 combinações de ano e área, e a amarela em 17.
+- **O que ainda balança:** mesmo com as faixas novas, o gap da renda com peso continua negativo em 2024 em educação (−3,0), polícia (−7,5) e transporte (−3,9). A margem de erro do notebook 03 vai dizer se essas diferenças são reais.
+- **Situação:** aprovadas pelo Pedro; falta a confirmação do Vitor e do Eduardo.
+
+### 12/10/2026 (tarde): conferência com as tabelas oficiais e correções nos notebooks 01 e 02
+
+**Conferência com as tabelas oficiais da CETIC**
+- As 12 planilhas oficiais de indivíduos (proporção, margem de erro, total e margem de erro do total; 2023 v1.1, 2024 v1.1 e 2025 v1.0) foram baixadas do site da CETIC e guardadas em `docs/fontes_cetic/tabelas/`. A aba "G2" das planilhas é o nosso G1 (procurou ou realizou), e a aba "G2A" é o nosso G2 (cinco colunas por área).
+- **Os % não batiam.** Exemplo: o G1 de saúde em 2024 dava 30,93%, e o oficial é 31,81%.
+- **Motivo: o universo.** As tabelas oficiais do módulo G contam só os usuários de Internet de 16 anos ou mais: quem tem 16+ e disse na C3 que usou a internet nos últimos 3 meses (a variável `F_C3_IDADE`). Já o questionário aplica o módulo G a quem usou a internet nos últimos 3 meses pela C3 **ou** pela J3 (internet no celular). Em 2023, 2024 e 2025, 1.135, 969 e 1.089 pessoas disseram "não" na C3 e "sim" na J3, e 1.133, 967 e 1.088 delas responderam o G1. Com o filtro `F_C3_IDADE = 1`, as nossas estimativas batem exatamente com as oficiais: G1 e G2, Total e grupos (região, raça e renda), nos 3 anos.
+- **Réplicas de 2023:** no arquivo bruto de indivíduos de 2023, `rep1` a `rep200` não são pesos, e sim contagens do sorteio do bootstrap (inteiros de 0 a 5, média ≈ 1). O peso de cada réplica é o `PESO` × a contagem. Com isso, as nossas margens de 2023 ficam perto das oficiais: a razão oficial ÷ nossa tem mediana 1,05 em 126 células (Total, região, raça e renda, nas 7 áreas). Não dá pra bater exato porque em 2023 a CETIC calculou as margens por outro método, o do conglomerado primário (relatório metodológico de 2023). A maior diferença é saúde no Total (1,25).
+- **Margens de 2024 e 2025:** a margem oficial é a nossa (1,96 × o desvio padrão das 200 réplicas) vezes uma constante, igual em todas as células do ano: 1,054 em 2024 (√(10/9)) e 1,140 em 2025 (√1,3). O relatório metodológico não explica esse fator. Isso confirma o "possível fator de escala nas réplicas" anotado em 03/10.
+
+**Decisões (ver "Decisões em vigor")**
+- **Universo da análise:** G1 e G2 só entre usuários de Internet de 16 anos ou mais, como nas tabelas da CETIC.
+- **Margem de erro:** em 2024 e 2025, as margens são multiplicadas pelo fator (1,054 e 1,140), pra reproduzir as oficiais. É o lado mais cauteloso: com margem maior, fica mais difícil achar uma diferença que não existe. Em 2023 fica sem fator. A origem do fator entra como limitação no método.
+- Falta a confirmação do grupo.
+
+**Correções**
+- **Lista de variáveis:** desde o commit de 11/10, a primeira linha de `docs/lista_final_variaveis_projeto.csv` começava com "git status" (o comando foi digitado dentro do arquivo aberto). Isso mudava o nome da coluna `variavel_final` e quebrava o notebook 01 com `KeyError`. Corrigido. A lista ganhou a linha `usuario_internet` (`F_C3_IDADE` nos 3 anos), e as observações das réplicas passaram a avisar das contagens de 2023.
+- **Notebook 01:**
+    - leva o `usuario_internet` pros arquivos (o `dados_harmonizados` passa a ter 33 colunas, e o `individuos_harmonizado`, 27);
+    - multiplica as réplicas de 2023 pelo `PESO` (o arquivo de réplicas foi de 133 pra cerca de 170 MB);
+    - ganhou um teste: em cada ano, a soma de cada réplica tem que ficar perto da soma do peso;
+    - um `.copy()` antes de criar a coluna `ano` acabou com o aviso `PerformanceWarning`.
+- **Notebook 02:** filtra o universo logo depois de carregar os dados (45.436 pessoas: 13.859, 14.686 e 16.891). O % de cada área mudou pouco (no máximo 2,9 p.p., na polícia 2024), e alguns grupos frágeis mudaram bastante. Os achados atualizados:
+    1. O peso muda o % em até ~10 p.p. (transporte 2023: 32,8 sem peso e 43,2 com peso; a pessoa mais pesada tem 9,5% do peso).
+    2. "Não tem renda" em saúde 2024: 51 pessoas, n efetivo ≈ 3, uma pessoa com 58% do peso; o % cai de 19,6 pra 5,9 com peso. No tabelão, 66 das 462 linhas têm n efetivo menor que 10.
+    3. 18 linhas passam na regra "n ≥ 50" com n efetivo menor que 10 (ex.: transporte 2023, "1 a 2 SM": 417 pessoas, n efetivo 9, de 29,3 pra 49,6 com peso).
+    4. A régua continua mudando a resposta em impostos 2024 (corte 10: renda; corte 20: região).
+    5. Gap da renda: sem peso, positivo em tudo (9,5 a 40,9 p.p.); com peso, negativo em educação 2024, transporte 2024, polícia 2025 e trabalho 2025, sempre com o "mais de 10 SM" frágil. **A polícia 2024 deixou de ser negativa:** no "até 1 SM", uma pessoa de fora do universo carregava 39% do peso do grupo; sem ela, o n efetivo do grupo foi de 6 pra 72, e o gap, de −9,3 pra 14,4 p.p. Impostos continua o único com gap grande e estável (com peso: 46,1, 43,1 e 30,5 p.p.).
+    6. Com as faixas novas (renda em 5, escolaridade em 3) e o universo, as linhas com n efetivo menor que 10 são 28 de 396, quase todas de indígena e amarela (a indígena tem n efetivo menor que 20 em 22 das 22 combinações de ano e área, e a amarela em 17). O gap da renda com peso (mais de 5 SM − até 1 SM) só fica negativo em educação 2024 (−3,9).
+
+**Ponto pro artigo**
+- As pessoas que ficaram fora do universo disseram, na C3, que não usaram a internet nos últimos 3 meses, mas, na J3, que usaram pelo celular. Isso conversa com o tema do projeto (o que conta como "usar a internet") e vale uma nota no método, explicando por que elas ficam fora da análise.
+
+### 12/10/2026 (noite): notebook 03 (margem de erro e testes)
+
+- **Como foi feito:** o Pedro montou o notebook passo a passo, e depois ele foi organizado no formato do 01 e do 02, com 15 seções, comentários linha por linha e testes de integridade.
+- **O que o notebook 03 faz:**
+    - margem de erro com as 200 réplicas (EP, IC e CV);
+    - conferência com as tabelas oficiais da CETIC (seção 4: o universo, o "não sabe / não respondeu" do G1 e o fator das margens);
+    - o tabelão com IC: 418 linhas, com as faixas novas e o Brasil;
+    - os gaps com IC: 176 linhas, com os 8 pares da decisão nº 3;
+    - o Rao-Scott de 2ª ordem: 88 testes, com a correção de Holm por ano (justiça à parte);
+    - o V de Cramér e o ranking das áreas;
+    - a exportação das 3 tabelas pro Power BI (ver `outputs/README.md`).
+- **O `svy` conferido:** o Rao-Scott do `svy` 0.31.0 deu exatamente o mesmo resultado que a fórmula do `svychisq` do pacote `survey` do R (com `statistic="F"`), nos 88 testes. As réplicas entram no `svy` com `scale` = fator² ÷ 199, o mesmo cálculo de margem do resto do notebook.
+- **G1 e o "não sabe / não respondeu":** com o universo certo, a diferença que sobrava pro G1 oficial (até 0,07 ponto) vinha do NS/NR. No nosso arquivo ele é NaN; a CETIC conta como "não". Contando igual, bate exatamente. A medida do projeto (G2 entre quem tentou) não muda.
+
+**Achados**
+1. **A amostra vale bem menos do que o número de entrevistas.** O qui-quadrado comum diria que 83 dos 88 testes têm diferença real; o Rao-Scott, 36; depois do Holm, 10. Em impostos 2024 por renda, o efeito do desenho é de umas 9 vezes. Ponto pro método: é uma melhoria em relação a quem usou o qui-quadrado simples, como Vargas et al. (2021).
+2. **As diferenças são pequenas, mas existem.** V de Cramér médio: região 0,175, renda 0,166, escolaridade 0,149 e raça 0,128, todas na faixa "pequena" da régua de Cohen. Escolaridade era a maior em 2023 (0,236) e caiu em 2024 e 2025 (0,096 e 0,116).
+3. **Escolaridade e região são as diferenças mais firmes:** dos 10 testes que passam no Holm, 5 são de escolaridade, 4 de região, 1 de renda e nenhum de raça.
+4. **Impostos é a área mais desigual e a mais certa:** gap de renda (mais de 5 SM menos até 1 SM) de 39,6, 31,5 e 33,8 pontos em 2023, 2024 e 2025, todos reais, e 6 dos 10 testes que passam no Holm. Polícia e transporte também têm V alto, mas pouca gente respondendo, e quase nunca passam no Holm (ex.: polícia por região em 2024, V = 0,347 e p ajustado de 0,084).
+5. **Saúde é a área mais igual:** menor V médio (0,111), e em 2024 a região não faz diferença (p = 0,66).
+6. **O Sudeste nem sempre está no topo:** os 8 gaps reais negativos são de região. O Sul resolve mais que o Sudeste em polícia, educação, transporte e saúde (pelos ICs dos gaps, sem Holm).
+7. **Raça:** nenhum teste passa no Holm. Isso não prova que não existe desigualdade racial: "preta" tem n efetivo baixo em várias áreas, e amarela e indígena ficaram fora dos testes. Vai como limitação no método.
+
 ---
 
 ## Próximos passos
 
-1. Rodar os notebooks 01 e 02 em cada computador do grupo, com Restart + Run All.
-2. Fechar as decisões em aberto, principalmente a 2, a 3 e a 4, à luz do notebook 02, e registrar aqui.
-3. Notebook 03: validar as réplicas contra as tabelas oficiais da CETIC (2024 e 2025); depois a margem de erro (IC) de cada % e de cada gap, o Rao-Scott, o V de Cramér e a correção dos p-valores.
-4. Exportar as tabelas pro Power BI e escrever os resultados.
+1. Rodar os notebooks 01, 02 e 03 com Restart + Run All e commitar.
+2. Gráficos: os do artigo, no notebook 03 (pontos com IC e heatmap área × dimensão com o V), e o painel do Power BI, a partir das 3 tabelas de `outputs/`.
+3. Confirmar com o grupo as decisões de 12/10, incluindo o universo e a margem de erro.
+4. Escrever os resultados e o método, com as limitações: o universo (C3 × J3), o fator das margens e a raça.
