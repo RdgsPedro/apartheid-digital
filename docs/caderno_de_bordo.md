@@ -38,7 +38,7 @@
 
 ## Decisões em aberto
 
-As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima. Elas foram aprovadas pelo Pedro; falta a confirmação do Vitor e do Eduardo. As duas decisões novas de 12/10 à tarde também precisam da confirmação do grupo: o universo da análise já está nos notebooks 01 e 02, e a margem de erro entra no notebook 03.
+As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima. Elas foram aprovadas pelo Pedro; falta a confirmação do Vitor e do Eduardo. As duas decisões novas de 12/10 à tarde também precisam da confirmação do grupo: o universo da análise já está nos notebooks 01 e 02, e a margem de erro, no notebook 03.
 
 1. **Bases complementares (OuvidoriaSUS e Fala.BR):** no máximo como validação cruzada por região. Uso ainda não confirmado; não trava o notebook 03.
 
@@ -280,11 +280,27 @@ As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos 
 6. **O Sudeste nem sempre está no topo:** os 8 gaps reais negativos são de região. O Sul resolve mais que o Sudeste em polícia, educação, transporte e saúde (pelos ICs dos gaps, sem Holm).
 7. **Raça:** nenhum teste passa no Holm. Isso não prova que não existe desigualdade racial: "preta" tem n efetivo baixo em várias áreas, e amarela e indígena ficaram fora dos testes. Vai como limitação no método.
 
+### 12/10/2026 (noite, parte 2): o G1 ao lado do G2 e os gráficos do artigo
+
+- **O que entrou no notebook 03** (que passou de 15 pra 17 seções):
+    - **Seção 13, o G1 ao lado:** o tabelão de quem tentou (418 linhas) e os gaps de quem tentou (176 linhas), com as mesmas contas do G2, mas com todos os usuários do grupo. O "não sabe / não respondeu" do G1 conta como "não", igual à CETIC, e o Brasil de 2024 bate com o número oficial (vira um teste de integridade). Tem também a conta "resolveu entre todos" (tentou × resolveu ÷ 100) e a comparação do V e dos gaps entre tentar e resolver.
+    - **Seção 14, os gráficos:** o heatmap do V (área × dimensão e ano, com `*` no que passa no Holm), os gaps de renda e de escolaridade com IC, e tentou × resolveu no Brasil em 2025. As cores seguem o 02 (os anos em 3 tons de azul) e foram conferidas pra daltonismo.
+    - **Saídas novas:** `estimativas_g1_ic.csv` e `gaps_g1_ic.csv`, com as mesmas colunas das tabelas do G2, e os 3 `.png` (ver `outputs/README.md`).
+- **O G1 é contexto, não teste:** ele mistura quem não conseguiu usar a internet com quem nem precisou do serviço (em impostos, quem ganha pouco muitas vezes nem precisa declarar o imposto de renda). O Rao-Scott, o Holm e o ranking continuam só no G2 (decisão nº 1).
+
+**Achados**
+1. **Contando todo mundo, pouca gente resolve tudo pela internet.** Em 2025, de cada 100 usuários de Internet, uns 18 resolveram impostos inteiramente online, 12 resolveram documentos e menos de 4, algo com a polícia.
+2. **Saúde é a área mais tentada (36,6%) e a menos resolvida (22,6% de quem tentou).** Hipótese pro texto: muita coisa da saúde, como a consulta e o exame, não dá pra terminar pela internet.
+3. **A dupla barreira da renda, em impostos 2025:** quem tem até 1 SM tenta menos (12,0% contra 62,6% de quem tem mais de 5 SM) e, quando tenta, resolve menos (39,7% contra 73,5%). Contando todo mundo, 4,8% contra 46,0%: quase 10 vezes menos.
+4. **No tentar, pesam escolaridade e renda; no resolver, aparecem também região e raça.** V médio do G1: escolaridade 0,213, renda 0,166, região 0,105 e raça 0,049. No G2: região 0,175, renda 0,166, escolaridade 0,149 e raça 0,128. Brancos, pretos e pardos tentam quase na mesma medida (gaps médios de 1,5 e 1,4 ponto), mas, entre quem tenta, os brancos resolvem uns 10 pontos a mais (sem confirmação no Holm).
+5. **O G1 tem mais gaps reais (73 de 176, contra 57 do G2), mas não diferenças maiores:** ele usa todo mundo (de 14 a 17 mil pessoas por ano), e o IC fica mais estreito. Pra comparar o tamanho, vale o gap médio e o V.
+6. **Nos gráficos:** a escolaridade era a maior diferença em 2023 (V de 0,26 a 0,35 em 5 das 7 áreas) e caiu em 2024 e 2025; o gap médio da escolaridade foi de 29,8 pontos em 2023 pra 12,8 e 14,0. Os gaps firmes, reais nos 3 anos, são impostos e documentos na renda, e impostos e educação na escolaridade.
+
 ---
 
 ## Próximos passos
 
 1. Rodar os notebooks 01, 02 e 03 com Restart + Run All e commitar.
-2. Gráficos: os do artigo, no notebook 03 (pontos com IC e heatmap área × dimensão com o V), e o painel do Power BI, a partir das 3 tabelas de `outputs/`.
+2. Montar o painel do Power BI a partir das tabelas de `outputs/`, com o G1 ao lado do G2.
 3. Confirmar com o grupo as decisões de 12/10, incluindo o universo e a margem de erro.
-4. Escrever os resultados e o método, com as limitações: o universo (C3 × J3), o fator das margens e a raça.
+4. Escrever os resultados e o método, com as limitações: o universo (C3 × J3), o fator das margens, a raça e o G1 como contexto (ele mistura quem não conseguiu com quem não precisou).

@@ -4,7 +4,9 @@ Aqui ficam os resultados que saem dos notebooks 02 e 03: tabelas e gráficos pro
 
 ## Saídas do notebook 03 (resultados, com margem de erro)
 
-As três tabelas usam só os usuários de Internet de 16 anos ou mais (o universo das tabelas da CETIC), as faixas da análise (renda em 5 e escolaridade em 3) e o fator das margens de 2024 e 2025 (decisão nº 9 do caderno).
+Todas as tabelas usam só os usuários de Internet de 16 anos ou mais (o universo das tabelas da CETIC), as faixas da análise (renda em 5 e escolaridade em 3) e o fator das margens de 2024 e 2025 (decisão nº 9 do caderno).
+
+### O G2: resolveu tudo pela internet, entre quem tentou (a medida principal)
 
 - `estimativas_ic.csv` (418 linhas): uma linha por ano × área × dimensão × categoria, com o Brasil inteiro na dimensão `total`.
     - `n`: pessoas que responderam o G2 da área
@@ -25,14 +27,27 @@ As três tabelas usam só os usuários de Internet de 16 anos ou mais (o univers
     - `ranking`: o lugar da área naquele ano e dimensão, pelo V (1 = maior diferença). Vazio na justiça
     - Os números saem com 6 casas: um p de 0,000000 quer dizer "menor que 0,000001"
 
+### O G1: tentou usar o serviço pela internet (sempre ao lado do G2, decisão nº 1)
+
+As duas tabelas têm as mesmas colunas das tabelas do G2, então dá pra juntar uma com a outra no Power BI pelo `ano`, `area`, `dimensao` e `categoria` (ou `par`).
+
+- `estimativas_g1_ic.csv` (418 linhas): o mesmo formato do `estimativas_ic.csv`.
+    - `n`: todos os usuários de Internet do grupo (tentou ou não)
+    - `pct`: % que tentou (G1 = 1), com peso. O "não sabe / não respondeu" conta como "não", igual à CETIC, então a linha do Brasil é o número oficial
+- `gaps_g1_ic.csv` (176 linhas): o mesmo formato do `gaps_ic.csv`, com o gap de quem tentou.
+- O G1 não tem teste nem ranking: ele é contexto. Ele mistura quem não conseguiu usar a internet com quem nem precisou do serviço.
+- Pra comparar o tamanho das diferenças entre o G1 e o G2, use o gap, e não o `diferenca_real`: o G1 usa todo mundo, então o IC dele é mais estreito e mais gaps dão "real".
+
+### Gráficos (para o artigo)
+
+- `heatmap_v_cramer.png`: o V de Cramér do G2 por área (colunas) e dimensão e ano (linhas). Quanto mais escuro, maior a diferença; o `*` marca o que passou no Holm.
+- `gaps_renda_escolaridade_ic.png`: os gaps do G2 de renda (mais de 5 SM menos até 1 SM) e de escolaridade (superior menos até fundamental), com IC, por área e ano. Ponto vazio: o IC passa pelo zero.
+- `tentou_resolveu_2025.png`: o G1 e o G2 do Brasil em 2025, por área, com IC.
+
 ## Saídas do notebook 02 (exploratórias)
 
 - `tabelao_eda.csv`: uma linha por ano × área × dimensão × categoria (462 linhas), com n, resolveram, % sem peso, % com peso e n efetivo. Desde 12/10, só com os usuários de Internet de 16 anos ou mais (`usuario_internet == 1`), o mesmo universo das tabelas oficiais da CETIC. Não tem margem de erro: serve pra explorar os dados, não como resultado final.
 - `gap_renda_pct_com_peso.png` e `gap_renda_pct_sem_peso.png`: o gap da renda (mais de 10 SM menos até 1 SM) por área e ano, com e sem peso, na mesma escala.
-
-## O que ainda vai aparecer aqui
-
-- Gráficos de pontos com IC por grupo e heatmap área × dimensão com o V de Cramér, em `.png`, para o artigo.
 
 ## Observações
 
