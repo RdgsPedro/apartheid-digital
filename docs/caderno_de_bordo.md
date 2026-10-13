@@ -15,7 +15,7 @@
 | Recorte | 2023, 2024 e 2025 (opção 2 da professora: últimos 3 anos com mais variáveis) | até 24/08 |
 | Variável central | G2_X (fez o serviço inteiro pela internet), com o G1_X (tentou) como par de cada área | até 24/08 |
 | Universo da análise | G1 e G2 só entre usuários de Internet de 16 anos ou mais (`usuario_internet` = 1, a `F_C3_IDADE` da CETIC), o mesmo universo das tabelas oficiais | 12/10 |
-| Áreas do ranking | 7 áreas, de A a G. Justiça (H) só existe em 2025 e entra à parte. Finanças vem da C8_H, outra pergunta, e fica fora do ranking | 21/09 (H) e 03/10 (finanças) |
+| Áreas do ranking | 7 áreas, de A a G. Justiça (H) só existe em 2025 e entra à parte. Finanças vem da C8_H, outra pergunta: fica fora do ranking e entra à parte, como o G1 (com IC e gaps, sem teste e sem ranking) | 21/09 (H), 03/10 (finanças fora do ranking) e 12/10 (finanças à parte) |
 | Religião | `RELIGIAO` não é usada | até 24/08 |
 | G2 em 0/1 | 1 = fez tudo online; 2 (precisou ir ao posto) e 3 (só procurou informação) = 0; 97/98/99 = NaN | 07/09 |
 | Peso | Qualquer conta com G1 ou G2 usa o peso do indivíduo e as réplicas do indivíduo, mesmo cruzando com renda ou região | 21/09 |
@@ -35,10 +35,12 @@
 | Grupos pequenos | Toda estimativa sai com IC, e com aviso quando o CV passa de 30%. Nos testes, as categorias são as mesmas em todas as áreas e anos; amarela e indígena ficam fora dos testes (aparecem à parte, com IC e aviso) e nunca são juntadas a outro grupo | 12/10 |
 | Correção dos p-valores | Holm, por ano: 28 testes (7 áreas × 4 dimensões); justiça à parte | 12/10 |
 | Ano a ano ou empilhado | Ano a ano como principal; os 3 anos empilhados como complemento | 12/10 |
+| Camada extra (qualidade do acesso) | Velocidade e valor da conexão ficam como trabalho futuro (muda a ideia de 24/08): cerca de 1 em cada 3 usuários fica sem a velocidade (de 27,6% a 32,7% de vazio), e elas não estão na pergunta de pesquisa. O notebook 01 continua preparando as duas | 12/10 |
+| Figuras | As figuras do artigo e da apresentação saem do Power BI, a partir das tabelas de `outputs/`. Os gráficos do notebook 03 ficam como conferência | 12/10 |
 
 ## Decisões em aberto
 
-As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima. Elas foram aprovadas pelo Pedro; falta a confirmação do Vitor e do Eduardo. As duas decisões novas de 12/10 à tarde também precisam da confirmação do grupo: o universo da análise já está nos notebooks 01 e 02, e a margem de erro, no notebook 03.
+As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima, junto com as duas de 12/10 à tarde (o universo e a margem de erro). O grupo todo (Pedro, Vitor e Eduardo) confirmou essas decisões em 12/10.
 
 1. **Bases complementares (OuvidoriaSUS e Fala.BR):** no máximo como validação cruzada por região. Uso ainda não confirmado; não trava o notebook 03.
 
@@ -296,11 +298,29 @@ As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos 
 5. **O G1 tem mais gaps reais (73 de 176, contra 57 do G2), mas não diferenças maiores:** ele usa todo mundo (de 14 a 17 mil pessoas por ano), e o IC fica mais estreito. Pra comparar o tamanho, vale o gap médio e o V.
 6. **Nos gráficos:** a escolaridade era a maior diferença em 2023 (V de 0,26 a 0,35 em 5 das 7 áreas) e caiu em 2024 e 2025; o gap médio da escolaridade foi de 29,8 pontos em 2023 pra 12,8 e 14,0. Os gaps firmes, reais nos 3 anos, são impostos e documentos na renda, e impostos e educação na escolaridade.
 
+### 12/10/2026 (noite, parte 3): decisões finais e finanças à parte
+
+- **O grupo confirmou** todas as decisões de 12/10: o Vitor e o Eduardo deram o ok.
+- **Três decisões novas** (na tabela acima):
+    - finanças entra à parte, como o G1: com IC e gaps, sem teste e sem ranking;
+    - velocidade e valor da conexão ficam como trabalho futuro;
+    - as figuras do artigo e da apresentação saem do Power BI, e os gráficos do notebook 03 ficam como conferência.
+- **O que mudou no notebook 03** (que passou de 17 pra 18 seções):
+    - seção 14 nova, finanças à parte: o tabelão (57 linhas), os gaps (24 linhas), finanças ao lado do G1 e a conferência com a tabela oficial;
+    - a seção dos gráficos virou "Gráficos de conferência" (seção 15);
+    - 2 tabelas novas em `outputs/`: `estimativas_financas_ic.csv` e `gaps_financas_ic.csv`.
+- **Finanças e a CETIC:** o número oficial é menor (57,5% contra 63,1% em 2025) porque a tabela da CETIC (aba C6) conta os usuários de 10 anos ou mais, e o projeto usa os de 16 anos ou mais. No mesmo universo, os dois batem: a diferença é de no máximo 0,17 ponto.
+
+**Achados**
+1. **Finanças é o uso mais comum:** 63,1% dos usuários em 2025, contra 36,6% que tentaram saúde, o serviço público mais tentado.
+2. **A desigualdade em finanças é de escolaridade, renda e região, e não de raça.** Em 2025, são 87,1% no superior contra 32,3% no até fundamental (gap de 54,8 pontos, o maior do projeto), e 86,0% com mais de 5 SM contra 44,3% com até 1 SM. O Sudeste fica 13,1 pontos acima do Nordeste. Os gaps de raça (de 2,1 a 3,8 pontos) não são reais em nenhum ano.
+3. **É o mesmo desenho do G1:** no uso, pesam escolaridade e renda, e raça quase não pesa. A diferença no uso da internet aparece também num serviço privado, e não só nos públicos.
+
 ---
 
 ## Próximos passos
 
-1. Rodar os notebooks 01, 02 e 03 com Restart + Run All e commitar.
-2. Montar o painel do Power BI a partir das tabelas de `outputs/`, com o G1 ao lado do G2.
-3. Confirmar com o grupo as decisões de 12/10, incluindo o universo e a margem de erro.
-4. Escrever os resultados e o método, com as limitações: o universo (C3 × J3), o fator das margens, a raça e o G1 como contexto (ele mistura quem não conseguiu com quem não precisou).
+1. Rodar o notebook 03 de novo, com Restart + Run All, e commitar.
+2. Montar no Power BI as figuras do artigo e o painel, a partir das 7 tabelas de `outputs/`.
+3. Escrever o texto: metodologia, resultados e conclusão, com as limitações (o universo C3 × J3, o fator das margens, a raça, o G1 e finanças como medidas de uso, e a camada extra como trabalho futuro).
+4. Fechamento: o `docs/documentacao_projeto.md`, o caderno e o último commit.

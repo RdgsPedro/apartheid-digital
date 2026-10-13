@@ -1,0 +1,25 @@
+﻿ano;area;dimensao;par;gap;ep;ic_inf;ic_sup;diferenca_real
+2023;finanças;renda5;mais de 5 SM - até 1 SM;37,7;5,01;27,8;47,5;True
+2023;finanças;escolaridade3;superior - até fundamental;50,4;3,52;43,5;57,3;True
+2023;finanças;raca;branca - preta;2,1;4,96;-7,6;11,8;False
+2023;finanças;raca;branca - parda;3,4;3,21;-2,9;9,7;False
+2023;finanças;regiao;Sudeste - Nordeste;12,1;3,78;4,7;19,5;True
+2023;finanças;regiao;Sudeste - Sul;-5,1;4,74;-14,4;4,2;False
+2023;finanças;regiao;Sudeste - Norte;-3,7;4,33;-12,2;4,8;False
+2023;finanças;regiao;Sudeste - Centro-Oeste;0,7;4,02;-7,2;8,6;False
+2024;finanças;renda5;mais de 5 SM - até 1 SM;52,3;2,84;46,7;57,8;True
+2024;finanças;escolaridade3;superior - até fundamental;53,8;2,64;48,7;59,0;True
+2024;finanças;raca;branca - preta;3,8;5,3;-6,5;14,2;False
+2024;finanças;raca;branca - parda;2,3;3,06;-3,7;8,3;False
+2024;finanças;regiao;Sudeste - Nordeste;15,8;3,4;9,1;22,5;True
+2024;finanças;regiao;Sudeste - Sul;-5,2;3,92;-12,9;2,5;False
+2024;finanças;regiao;Sudeste - Norte;1,9;3,83;-5,6;9,4;False
+2024;finanças;regiao;Sudeste - Centro-Oeste;1,4;3,59;-5,7;8,4;False
+2025;finanças;renda5;mais de 5 SM - até 1 SM;41,8;3,15;35,6;47,9;True
+2025;finanças;escolaridade3;superior - até fundamental;54,8;2,26;50,3;59,2;True
+2025;finanças;raca;branca - preta;2,3;3,29;-4,2;8,7;False
+2025;finanças;raca;branca - parda;2,4;2,43;-2,4;7,2;False
+2025;finanças;regiao;Sudeste - Nordeste;13,1;2,73;7,7;18,4;True
+2025;finanças;regiao;Sudeste - Sul;5,8;3,25;-0,6;12,1;False
+2025;finanças;regiao;Sudeste - Norte;3,9;3,11;-2,2;10,0;False
+2025;finanças;regiao;Sudeste - Centro-Oeste;3,4;2,77;-2,0;8,8;False

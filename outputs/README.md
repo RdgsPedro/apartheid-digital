@@ -38,7 +38,18 @@ As duas tabelas têm as mesmas colunas das tabelas do G2, então dá pra juntar 
 - O G1 não tem teste nem ranking: ele é contexto. Ele mistura quem não conseguiu usar a internet com quem nem precisou do serviço.
 - Pra comparar o tamanho das diferenças entre o G1 e o G2, use o gap, e não o `diferenca_real`: o G1 usa todo mundo, então o IC dele é mais estreito e mais gaps dão "real".
 
-### Gráficos (para o artigo)
+### Finanças, à parte
+
+Finanças está na pergunta de pesquisa, mas não tem G1 nem G2: vem da C8_H ("fez consultas, pagamentos ou outras transações financeiras" pela internet, nos últimos 3 meses). É uma medida de uso, como o G1, então entra à parte, com IC e gaps, sem teste e sem ranking.
+
+- `estimativas_financas_ic.csv` (57 linhas): o mesmo formato do `estimativas_g1_ic.csv`, com `area` = finanças (3 anos × 19 categorias).
+    - `pct`: % que fez transações financeiras pela internet, entre todos os usuários de Internet do grupo. O "não sabe / não respondeu" conta como "não"
+    - O número do Brasil é maior que o da tabela oficial (63,1% contra 57,5% em 2025) porque a CETIC conta os usuários de 10 anos ou mais, e o projeto usa os de 16 anos ou mais. No mesmo universo, os dois batem (diferença de no máximo 0,17 ponto)
+- `gaps_financas_ic.csv` (24 linhas): o mesmo formato do `gaps_g1_ic.csv` (3 anos × 8 pares).
+
+### Gráficos de conferência
+
+As figuras do artigo e da apresentação saem do Power BI, a partir das tabelas acima. Os três gráficos do notebook 03 ficam como conferência: mostram o IC e o Holm, e servem pra checar se o painel mostra os mesmos números.
 
 - `heatmap_v_cramer.png`: o V de Cramér do G2 por área (colunas) e dimensão e ano (linhas). Quanto mais escuro, maior a diferença; o `*` marca o que passou no Holm.
 - `gaps_renda_escolaridade_ic.png`: os gaps do G2 de renda (mais de 5 SM menos até 1 SM) e de escolaridade (superior menos até fundamental), com IC, por área e ano. Ponto vazio: o IC passa pelo zero.
@@ -52,6 +63,6 @@ As duas tabelas têm as mesmas colunas das tabelas do G2, então dá pra juntar 
 ## Observações
 
 - Justiça (H) só existe em 2025, então fica fora do ranking principal e entra como análise à parte.
-- Finanças vem da C8_H, que é outra pergunta (uso nos últimos 3 meses, outro universo), então também não entra no ranking do G2.
+- Finanças vem da C8_H, que é outra pergunta (uso nos últimos 3 meses), então não entra no ranking do G2: fica à parte, nas tabelas de finanças.
 - O tamanho (`v_cramer`) e a certeza (`real_holm`) são coisas diferentes: uma área pode ter o maior V e não passar no Holm (exemplo: polícia, por região, em 2024). Os gráficos e o texto mostram sempre os dois.
 - Os CSVs saem com `sep=';'` e `decimal=','` pra o Power BI em português ler os números certo, e com `encoding='utf-8-sig'` pra o Excel abrir os acentos certo.
