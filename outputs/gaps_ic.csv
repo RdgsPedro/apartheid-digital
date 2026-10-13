@@ -1,60 +1,60 @@
 ﻿ano;area;dimensao;par;gap;ep;ic_inf;ic_sup;diferenca_real
-2023;documentos;renda5;mais de 5 SM - até 1 SM;14,9;6,9;1,4;28,5;True
-2023;documentos;escolaridade3;superior - até fundamental;7,3;10,07;-12,5;27,0;False
-2023;documentos;raca;branca - preta;-3,3;11,79;-26,4;19,8;False
-2023;documentos;raca;branca - parda;6,6;9,97;-12,9;26,2;False
-2023;documentos;regiao;Sudeste - Nordeste;17,2;8,68;0,1;34,2;True
-2023;documentos;regiao;Sudeste - Sul;2,5;9,67;-16,4;21,5;False
-2023;documentos;regiao;Sudeste - Norte;14,9;8,42;-1,6;31,4;False
-2023;documentos;regiao;Sudeste - Centro-Oeste;1,2;8,56;-15,6;17,9;False
-2023;saúde;renda5;mais de 5 SM - até 1 SM;2,1;5,11;-7,9;12,1;False
-2023;saúde;escolaridade3;superior - até fundamental;10,5;4,54;1,6;19,4;True
-2023;saúde;raca;branca - preta;-9,6;11,68;-32,5;13,3;False
-2023;saúde;raca;branca - parda;5,9;3,92;-1,8;13,5;False
-2023;saúde;regiao;Sudeste - Nordeste;6,9;3,47;0,1;13,7;True
-2023;saúde;regiao;Sudeste - Sul;-16,2;9,61;-35,1;2,6;False
-2023;saúde;regiao;Sudeste - Norte;-0,2;4,32;-8,7;8,3;False
-2023;saúde;regiao;Sudeste - Centro-Oeste;-4,5;4,39;-13,1;4,1;False
-2023;educação;renda5;mais de 5 SM - até 1 SM;9,2;9,82;-10,0;28,4;False
-2023;educação;escolaridade3;superior - até fundamental;39,9;9,53;21,2;58,6;True
-2023;educação;raca;branca - preta;19,3;10,22;-0,7;39,3;False
-2023;educação;raca;branca - parda;18,2;9,41;-0,3;36,7;False
-2023;educação;regiao;Sudeste - Nordeste;21,3;8,76;4,1;38,5;True
-2023;educação;regiao;Sudeste - Sul;7,4;10,25;-12,7;27,5;False
-2023;educação;regiao;Sudeste - Norte;14,0;9,91;-5,4;33,4;False
-2023;educação;regiao;Sudeste - Centro-Oeste;8,6;10,07;-11,2;28,3;False
-2023;trabalho;renda5;mais de 5 SM - até 1 SM;21,5;6,57;8,6;34,4;True
-2023;trabalho;escolaridade3;superior - até fundamental;31,3;8,55;14,6;48,1;True
-2023;trabalho;raca;branca - preta;12,2;8,62;-4,7;29,1;False
-2023;trabalho;raca;branca - parda;2,0;8,11;-13,9;17,8;False
-2023;trabalho;regiao;Sudeste - Nordeste;12,9;7,44;-1,7;27,5;False
-2023;trabalho;regiao;Sudeste - Sul;-3,4;7,77;-18,6;11,8;False
-2023;trabalho;regiao;Sudeste - Norte;12,9;8,26;-3,3;29,1;False
-2023;trabalho;regiao;Sudeste - Centro-Oeste;6,3;7,53;-8,5;21,0;False
-2023;impostos;renda5;mais de 5 SM - até 1 SM;39,6;5,46;28,9;50,3;True
-2023;impostos;escolaridade3;superior - até fundamental;45,3;5,9;33,8;56,9;True
-2023;impostos;raca;branca - preta;12,8;8,15;-3,2;28,7;False
-2023;impostos;raca;branca - parda;15,7;6,19;3,6;27,8;True
-2023;impostos;regiao;Sudeste - Nordeste;17,6;5,54;6,8;28,5;True
-2023;impostos;regiao;Sudeste - Sul;-0,2;6,01;-12,0;11,5;False
-2023;impostos;regiao;Sudeste - Norte;23,0;7,96;7,3;38,6;True
-2023;impostos;regiao;Sudeste - Centro-Oeste;0,3;5,61;-10,7;11,3;False
-2023;polícia;renda5;mais de 5 SM - até 1 SM;35,1;9,18;17,2;53,1;True
-2023;polícia;escolaridade3;superior - até fundamental;47,7;7,02;34,0;61,5;True
-2023;polícia;raca;branca - preta;16,9;10,77;-4,2;38,0;False
-2023;polícia;raca;branca - parda;15,4;7,25;1,2;29,6;True
-2023;polícia;regiao;Sudeste - Nordeste;15,2;7,78;-0,0;30,4;False
-2023;polícia;regiao;Sudeste - Sul;-2,1;9,73;-21,2;17,0;False
-2023;polícia;regiao;Sudeste - Norte;25,9;9,44;7,4;44,4;True
-2023;polícia;regiao;Sudeste - Centro-Oeste;5,7;8,0;-10,0;21,3;False
-2023;transporte;renda5;mais de 5 SM - até 1 SM;23,1;11,01;1,5;44,7;True
-2023;transporte;escolaridade3;superior - até fundamental;26,4;14,25;-1,5;54,3;False
-2023;transporte;raca;branca - preta;17,7;17,24;-16,1;51,5;False
-2023;transporte;raca;branca - parda;26,1;14,01;-1,4;53,5;False
-2023;transporte;regiao;Sudeste - Nordeste;28,9;11,15;7,0;50,7;True
-2023;transporte;regiao;Sudeste - Sul;5,5;12,15;-18,4;29,3;False
-2023;transporte;regiao;Sudeste - Norte;34,8;11,49;12,3;57,3;True
-2023;transporte;regiao;Sudeste - Centro-Oeste;10,1;12,34;-14,1;34,3;False
+2023;documentos;renda5;mais de 5 SM - até 1 SM;14,9;7,27;0,7;29,2;True
+2023;documentos;escolaridade3;superior - até fundamental;7,3;10,61;-13,5;28,0;False
+2023;documentos;raca;branca - preta;-3,3;12,43;-27,6;21,1;False
+2023;documentos;raca;branca - parda;6,6;10,51;-14,0;27,2;False
+2023;documentos;regiao;Sudeste - Nordeste;17,2;9,15;-0,8;35,1;False
+2023;documentos;regiao;Sudeste - Sul;2,5;10,19;-17,5;22,5;False
+2023;documentos;regiao;Sudeste - Norte;14,9;8,87;-2,5;32,3;False
+2023;documentos;regiao;Sudeste - Centro-Oeste;1,2;9,02;-16,5;18,8;False
+2023;saúde;renda5;mais de 5 SM - até 1 SM;2,1;5,39;-8,5;12,6;False
+2023;saúde;escolaridade3;superior - até fundamental;10,5;4,79;1,1;19,9;True
+2023;saúde;raca;branca - preta;-9,6;12,31;-33,7;14,6;False
+2023;saúde;raca;branca - parda;5,9;4,13;-2,2;14,0;False
+2023;saúde;regiao;Sudeste - Nordeste;6,9;3,66;-0,2;14,1;False
+2023;saúde;regiao;Sudeste - Sul;-16,2;10,13;-36,1;3,6;False
+2023;saúde;regiao;Sudeste - Norte;-0,2;4,55;-9,1;8,7;False
+2023;saúde;regiao;Sudeste - Centro-Oeste;-4,5;4,62;-13,6;4,5;False
+2023;educação;renda5;mais de 5 SM - até 1 SM;9,2;10,35;-11,1;29,5;False
+2023;educação;escolaridade3;superior - até fundamental;39,9;10,05;20,2;59,6;True
+2023;educação;raca;branca - preta;19,3;10,77;-1,8;40,4;False
+2023;educação;raca;branca - parda;18,2;9,92;-1,2;37,6;False
+2023;educação;regiao;Sudeste - Nordeste;21,3;9,23;3,2;39,4;True
+2023;educação;regiao;Sudeste - Sul;7,4;10,8;-13,8;28,5;False
+2023;educação;regiao;Sudeste - Norte;14,0;10,44;-6,4;34,5;False
+2023;educação;regiao;Sudeste - Centro-Oeste;8,6;10,62;-12,3;29,4;False
+2023;trabalho;renda5;mais de 5 SM - até 1 SM;21,5;6,93;7,9;35,1;True
+2023;trabalho;escolaridade3;superior - até fundamental;31,3;9,01;13,7;49,0;True
+2023;trabalho;raca;branca - preta;12,2;9,08;-5,6;30,0;False
+2023;trabalho;raca;branca - parda;2,0;8,54;-14,8;18,7;False
+2023;trabalho;regiao;Sudeste - Nordeste;12,9;7,84;-2,4;28,3;False
+2023;trabalho;regiao;Sudeste - Sul;-3,4;8,19;-19,5;12,7;False
+2023;trabalho;regiao;Sudeste - Norte;12,9;8,7;-4,2;30,0;False
+2023;trabalho;regiao;Sudeste - Centro-Oeste;6,3;7,94;-9,3;21,8;False
+2023;impostos;renda5;mais de 5 SM - até 1 SM;39,6;5,75;28,4;50,9;True
+2023;impostos;escolaridade3;superior - até fundamental;45,3;6,22;33,2;57,5;True
+2023;impostos;raca;branca - preta;12,8;8,59;-4,1;29,6;False
+2023;impostos;raca;branca - parda;15,7;6,52;2,9;28,5;True
+2023;impostos;regiao;Sudeste - Nordeste;17,6;5,84;6,2;29,1;True
+2023;impostos;regiao;Sudeste - Sul;-0,2;6,33;-12,7;12,2;False
+2023;impostos;regiao;Sudeste - Norte;23,0;8,39;6,5;39,4;True
+2023;impostos;regiao;Sudeste - Centro-Oeste;0,3;5,91;-11,3;11,9;False
+2023;polícia;renda5;mais de 5 SM - até 1 SM;35,1;9,67;16,2;54,1;True
+2023;polícia;escolaridade3;superior - até fundamental;47,7;7,4;33,2;62,2;True
+2023;polícia;raca;branca - preta;16,9;11,35;-5,4;39,1;False
+2023;polícia;raca;branca - parda;15,4;7,64;0,5;30,4;True
+2023;polícia;regiao;Sudeste - Nordeste;15,2;8,19;-0,9;31,3;False
+2023;polícia;regiao;Sudeste - Sul;-2,1;10,26;-22,2;18,0;False
+2023;polícia;regiao;Sudeste - Norte;25,9;9,95;6,4;45,4;True
+2023;polícia;regiao;Sudeste - Centro-Oeste;5,7;8,43;-10,9;22,2;False
+2023;transporte;renda5;mais de 5 SM - até 1 SM;23,1;11,6;0,4;45,9;True
+2023;transporte;escolaridade3;superior - até fundamental;26,4;15,02;-3,0;55,8;False
+2023;transporte;raca;branca - preta;17,7;18,17;-17,9;53,3;False
+2023;transporte;raca;branca - parda;26,1;14,77;-2,9;55,0;False
+2023;transporte;regiao;Sudeste - Nordeste;28,9;11,75;5,8;51,9;True
+2023;transporte;regiao;Sudeste - Sul;5,5;12,8;-19,6;30,5;False
+2023;transporte;regiao;Sudeste - Norte;34,8;12,11;11,1;58,5;True
+2023;transporte;regiao;Sudeste - Centro-Oeste;10,1;13,01;-15,4;35,6;False
 2024;documentos;renda5;mais de 5 SM - até 1 SM;21,1;9,43;2,6;39,6;True
 2024;documentos;escolaridade3;superior - até fundamental;0,4;8,67;-16,6;17,4;False
 2024;documentos;raca;branca - preta;12,6;8,21;-3,5;28,7;False

@@ -23,7 +23,7 @@ Aqui ficam os dados depois da harmonização: nomes de colunas iguais nos 3 anos
 
 ## As réplicas de 2023
 
-- No arquivo bruto de 2023, `rep1` a `rep200` não são pesos: são **contagens** do sorteio do bootstrap (inteiros de 0 a 5). O notebook 01 multiplica cada uma pelo `PESO` da pessoa, então em `individuos_pesos_replica.csv` as réplicas dos 3 anos já estão como peso.
+- No arquivo bruto de 2023, `rep1` a `rep200` não são pesos: são **contagens** do sorteio do bootstrap (inteiros de 0 a 7). O notebook 01 multiplica cada uma pelo `PESO` da pessoa, então em `individuos_pesos_replica.csv` as réplicas dos 3 anos já estão como peso.
 - Em 2024 e 2025 a soma de cada réplica é igual à soma do peso do ano. Em 2023 fica entre 0,93 e 1,10 vezes a soma do peso, porque essas réplicas não foram calibradas como as de 2024 e 2025.
 
 ## Versionamento

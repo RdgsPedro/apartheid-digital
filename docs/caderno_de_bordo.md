@@ -9,40 +9,41 @@
 
 ## Decisões em vigor
 
-| Tema | Decisão | Desde |
-| --- | --- | --- |
-| Base de dados | Microdados da TIC Domicílios (CETIC.br/NIC.br), módulos domicílios e indivíduos | até 24/08 |
-| Recorte | 2023, 2024 e 2025 (opção 2 da professora: últimos 3 anos com mais variáveis) | até 24/08 |
-| Variável central | G2_X (fez o serviço inteiro pela internet), com o G1_X (tentou) como par de cada área | até 24/08 |
-| Universo da análise | G1 e G2 só entre usuários de Internet de 16 anos ou mais (`usuario_internet` = 1, a `F_C3_IDADE` da CETIC), o mesmo universo das tabelas oficiais | 12/10 |
-| Áreas do ranking | 7 áreas, de A a G. Justiça (H) só existe em 2025 e entra à parte. Finanças vem da C8_H, outra pergunta: fica fora do ranking e entra à parte, como o G1 (com IC e gaps, sem teste e sem ranking) | 21/09 (H), 03/10 (finanças fora do ranking) e 12/10 (finanças à parte) |
-| Religião | `RELIGIAO` não é usada | até 24/08 |
-| G2 em 0/1 | 1 = fez tudo online; 2 (precisou ir ao posto) e 3 (só procurou informação) = 0; 97/98/99 = NaN | 07/09 |
-| Peso | Qualquer conta com G1 ou G2 usa o peso do indivíduo e as réplicas do indivíduo, mesmo cruzando com renda ou região | 21/09 |
-| Réplicas | 200 réplicas bootstrap do indivíduo, num arquivo separado e fora do Git. No arquivo bruto de 2023 elas vêm como contagens do sorteio, e o notebook 01 multiplica cada uma pelo `PESO` | 21/09 (contagens de 2023: 12/10) |
-| Margem de erro | EP = desvio padrão das 200 réplicas; margem = 1,96 × EP. Em 2024 e 2025, a margem é multiplicada por 1,054 e 1,140, o fator constante que reproduz as margens oficiais; 2023 fica sem fator | 12/10 |
-| Nível de significância | α = 0,05, fixado antes de qualquer teste | 07/09 |
-| Teste | Rao-Scott de 2ª ordem, e não um qui-quadrado simples. Feito pelo `svy`, conferido contra o `svychisq` do pacote `survey` do R (resultado idêntico nos 88 testes) | 07/09 (conferência: 12/10) |
-| Ferramenta | `svy` (Python), fixo na versão 0.31.0; o pacote `survey` do R fica de plano B | até 02/10 (versão fixada em 10/10) |
-| Códigos 97/98/99 | Viram NaN, com duas exceções: velocidade e valor da conexão (linhas abaixo) | 21/09 e 10/10 |
-| Renda | 97 e 98 viram NaN; o 7 ("não tem renda") fica como código próprio nos dados (na análise ele entra junto com "até 1 SM", ver "Faixas na análise") | 10/10 |
-| Velocidade | 5 categorias usando o tipo de conexão (A7): `baixa`, `media`, `alta`, `movel` e `sem internet`; discada e não sabe viram NaN | 10/10 (substitui a regra de 21/09) |
-| Valor da conexão | 97/98/99 viram NaN; "não paga nada" vira o código 0 nos 3 anos | 10/10 |
-| Fontes do artigo | Só autores de pós-graduação em diante; estado da arte com textos de 2021 em diante | 02/10 |
-| Medida principal | G2 entre quem tentou (G1 = 1) como medida principal, sempre com o G1 ao lado | 12/10 |
-| Faixas na análise | Renda em 5 faixas: até 1 SM (junto com o 7, "não tem renda"), 1 a 2, 2 a 3, 3 a 5 e mais de 5 SM. Escolaridade em 3: até fundamental (junto com analfabeto/infantil), médio e superior | 12/10 |
-| Grupos do gap | Sempre grupos fixos, nunca "maior − menor". Renda: até 1 SM × mais de 5 SM. Escolaridade: até fundamental × superior. Raça: branca × preta e branca × parda. Região: Sudeste × cada uma das outras quatro | 12/10 |
-| Grupos pequenos | Toda estimativa sai com IC, e com aviso quando o CV passa de 30%. Nos testes, as categorias são as mesmas em todas as áreas e anos; amarela e indígena ficam fora dos testes (aparecem à parte, com IC e aviso) e nunca são juntadas a outro grupo | 12/10 |
-| Correção dos p-valores | Holm, por ano: 28 testes (7 áreas × 4 dimensões); justiça à parte | 12/10 |
-| Ano a ano ou empilhado | Ano a ano como principal; os 3 anos empilhados como complemento | 12/10 |
-| Camada extra (qualidade do acesso) | Velocidade e valor da conexão ficam como trabalho futuro (muda a ideia de 24/08): cerca de 1 em cada 3 usuários fica sem a velocidade (de 27,6% a 32,7% de vazio), e elas não estão na pergunta de pesquisa. O notebook 01 continua preparando as duas | 12/10 |
-| Figuras | As figuras do artigo e da apresentação saem do Power BI, a partir das tabelas de `outputs/`. Os gráficos do notebook 03 ficam como conferência | 12/10 |
+A coluna Nº é o número que os notebooks e o `outputs/README.md` usam pra citar as decisões de 12/10 (por exemplo, "decisão nº 9").
+
+| Nº | Tema | Decisão | Desde |
+| --- | --- | --- | --- |
+|  | Base de dados | Microdados da TIC Domicílios (CETIC.br/NIC.br), módulos domicílios e indivíduos | até 24/08 |
+|  | Recorte | 2023, 2024 e 2025 (opção 2 da professora: últimos 3 anos com mais variáveis) | até 24/08 |
+|  | Variável central | G2_X (fez o serviço inteiro pela internet), com o G1_X (tentou) como par de cada área | até 24/08 |
+| 8 | Universo da análise | G1 e G2 só entre usuários de Internet de 16 anos ou mais (`usuario_internet` = 1, a `F_C3_IDADE` da CETIC), o mesmo universo das tabelas oficiais | 12/10 |
+|  | Áreas do ranking | 7 áreas, de A a G. Justiça (H) só existe em 2025 e entra à parte. Finanças vem da C8_H, outra pergunta: fica fora do ranking e entra à parte, como o G1 (com IC e gaps, sem teste e sem ranking) | 21/09 (H), 03/10 (finanças fora do ranking) e 12/10 (finanças à parte) |
+|  | Religião | `RELIGIAO` não é usada | até 24/08 |
+|  | G2 em 0/1 | 1 = fez tudo online; 2 (precisou ir ao posto) e 3 (só procurou informação) = 0; 97/98/99 = NaN | 07/09 |
+|  | Peso | Qualquer conta com G1 ou G2 usa o peso do indivíduo e as réplicas do indivíduo, mesmo cruzando com renda ou região | 21/09 |
+|  | Réplicas | 200 réplicas bootstrap do indivíduo, num arquivo separado e fora do Git. No arquivo bruto de 2023 elas vêm como contagens do sorteio, e o notebook 01 multiplica cada uma pelo `PESO` | 21/09 (contagens de 2023: 12/10) |
+| 9 | Margem de erro | EP = desvio padrão das 200 réplicas; margem = 1,96 × EP. A margem é multiplicada pelo fator que reproduz as margens oficiais: 1,054 em 2024 e 1,140 em 2025, iguais em todos os grupos, e 1,054 em 2023, em que a CETIC usou outro método e a margem oficial é a nossa × 1,054 em média | 12/10 (2023: 13/10) |
+|  | Nível de significância | α = 0,05, fixado antes de qualquer teste | 07/09 |
+|  | Teste | Rao-Scott de 2ª ordem, e não um qui-quadrado simples. Feito pelo `svy`, conferido contra a fórmula do `svychisq` do pacote `survey` do R, refeita em Python (resultado idêntico nos 88 testes) | 07/09 (conferência: 12/10) |
+|  | Ferramenta | `svy` (Python), fixo na versão 0.31.0; o pacote `survey` do R fica de plano B | até 02/10 (versão fixada em 10/10) |
+|  | Códigos 97/98/99 | Viram NaN, com duas exceções: velocidade e valor da conexão (linhas abaixo) | 21/09 e 10/10 |
+|  | Renda | 97 e 98 viram NaN; o 7 ("não tem renda") fica como código próprio nos dados (na análise ele entra junto com "até 1 SM", ver "Faixas na análise") | 10/10 |
+|  | Velocidade | 5 categorias usando o tipo de conexão (A7): `baixa`, `media`, `alta`, `movel` e `sem internet`; discada e não sabe viram NaN | 10/10 (substitui a regra de 21/09) |
+|  | Valor da conexão | 97/98/99 viram NaN; "não paga nada" vira o código 0 nos 3 anos | 10/10 |
+|  | Fontes do artigo | Só autores de pós-graduação em diante; estado da arte com textos de 2021 em diante | 02/10 |
+| 1 | Medida principal | G2 entre quem tentou (G1 = 1) como medida principal, sempre com o G1 ao lado | 12/10 |
+| 2 | Faixas na análise | Renda em 5 faixas: até 1 SM (junto com o 7, "não tem renda"), 1 a 2, 2 a 3, 3 a 5 e mais de 5 SM. Escolaridade em 3: até fundamental (junto com analfabeto/infantil), médio e superior | 12/10 |
+| 3 | Grupos do gap | Sempre grupos fixos, nunca "maior − menor". Renda: até 1 SM × mais de 5 SM. Escolaridade: até fundamental × superior. Raça: branca × preta e branca × parda. Região: Sudeste × cada uma das outras quatro | 12/10 |
+| 4 | Grupos pequenos | Toda estimativa sai com IC, e com aviso quando o CV passa de 30%. Nos testes, as categorias são as mesmas em todas as áreas e anos; amarela e indígena ficam fora dos testes (aparecem à parte, com IC e aviso) e nunca são juntadas a outro grupo | 12/10 |
+| 5 | Correção dos p-valores | Holm, por ano: 28 testes (7 áreas × 4 dimensões); justiça à parte | 12/10 |
+| 6 | Ano a ano ou empilhado | Ano a ano como principal; os 3 anos empilhados como complemento | 12/10 |
+| 7 | Bases complementares | OuvidoriaSUS e Fala.BR ficam como trabalho futuro: não estão na pergunta de pesquisa e são outro tipo de dado (registros de atendimento, e não uma pesquisa por amostra) | 12/10 |
+|  | Camada extra (qualidade do acesso) | Velocidade e valor da conexão ficam como trabalho futuro (muda a ideia de 24/08): cerca de 1 em cada 3 usuários fica sem a velocidade (de 27,6% a 32,7% de vazio), e elas não estão na pergunta de pesquisa. O notebook 01 continua preparando as duas | 12/10 |
+|  | Figuras | As figuras do artigo e da apresentação saem do Power BI, a partir das tabelas de `outputs/`. Os gráficos do notebook 03 ficam como conferência | 12/10 |
 
 ## Decisões em aberto
 
-As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima, junto com as duas de 12/10 à tarde (o universo e a margem de erro). O grupo todo (Pedro, Vitor e Eduardo) confirmou essas decisões em 12/10.
-
-1. **Bases complementares (OuvidoriaSUS e Fala.BR):** no máximo como validação cruzada por região. Uso ainda não confirmado; não trava o notebook 03.
+Nenhuma. As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos do gap, grupos pequenos, correção dos p-valores e ano a ano) foram fechadas em 12/10 e estão na tabela acima, junto com as duas de 12/10 à tarde (o universo e a margem de erro, nº 8 e 9). O grupo todo (Pedro, Vitor e Eduardo) confirmou essas decisões em 12/10. A última que sobrava, as bases complementares (OuvidoriaSUS e Fala.BR), virou trabalho futuro em 12/10 (nº 7). Em 13/10, a nº 9 foi revista pra 2023 (ver a entrada de 13/10).
 
 ---
 
@@ -233,7 +234,7 @@ As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos 
 - As 12 planilhas oficiais de indivíduos (proporção, margem de erro, total e margem de erro do total; 2023 v1.1, 2024 v1.1 e 2025 v1.0) foram baixadas do site da CETIC e guardadas em `docs/fontes_cetic/tabelas/`. A aba "G2" das planilhas é o nosso G1 (procurou ou realizou), e a aba "G2A" é o nosso G2 (cinco colunas por área).
 - **Os % não batiam.** Exemplo: o G1 de saúde em 2024 dava 30,93%, e o oficial é 31,81%.
 - **Motivo: o universo.** As tabelas oficiais do módulo G contam só os usuários de Internet de 16 anos ou mais: quem tem 16+ e disse na C3 que usou a internet nos últimos 3 meses (a variável `F_C3_IDADE`). Já o questionário aplica o módulo G a quem usou a internet nos últimos 3 meses pela C3 **ou** pela J3 (internet no celular). Em 2023, 2024 e 2025, 1.135, 969 e 1.089 pessoas disseram "não" na C3 e "sim" na J3, e 1.133, 967 e 1.088 delas responderam o G1. Com o filtro `F_C3_IDADE = 1`, as nossas estimativas batem exatamente com as oficiais: G1 e G2, Total e grupos (região, raça e renda), nos 3 anos.
-- **Réplicas de 2023:** no arquivo bruto de indivíduos de 2023, `rep1` a `rep200` não são pesos, e sim contagens do sorteio do bootstrap (inteiros de 0 a 5, média ≈ 1). O peso de cada réplica é o `PESO` × a contagem. Com isso, as nossas margens de 2023 ficam perto das oficiais: a razão oficial ÷ nossa tem mediana 1,05 em 126 células (Total, região, raça e renda, nas 7 áreas). Não dá pra bater exato porque em 2023 a CETIC calculou as margens por outro método, o do conglomerado primário (relatório metodológico de 2023). A maior diferença é saúde no Total (1,25).
+- **Réplicas de 2023:** no arquivo bruto de indivíduos de 2023, `rep1` a `rep200` não são pesos, e sim contagens do sorteio do bootstrap (inteiros de 0 a 7, média ≈ 1). O peso de cada réplica é o `PESO` × a contagem. Com isso, as nossas margens de 2023 ficam perto das oficiais: a razão oficial ÷ nossa tem mediana 1,05 em 126 células (Total, região, raça e renda, nas 7 áreas). Não dá pra bater exato porque em 2023 a CETIC calculou as margens por outro método, o do conglomerado primário (relatório metodológico de 2023). A maior diferença é saúde no Total (1,25).
 - **Margens de 2024 e 2025:** a margem oficial é a nossa (1,96 × o desvio padrão das 200 réplicas) vezes uma constante, igual em todas as células do ano: 1,054 em 2024 (√(10/9)) e 1,140 em 2025 (√1,3). O relatório metodológico não explica esse fator. Isso confirma o "possível fator de escala nas réplicas" anotado em 03/10.
 
 **Decisões (ver "Decisões em vigor")**
@@ -274,6 +275,9 @@ As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos 
 - **G1 e o "não sabe / não respondeu":** com o universo certo, a diferença que sobrava pro G1 oficial (até 0,07 ponto) vinha do NS/NR. No nosso arquivo ele é NaN; a CETIC conta como "não". Contando igual, bate exatamente. A medida do projeto (G2 entre quem tentou) não muda.
 
 **Achados**
+
+*Números de antes do fator de 2023: os itens 1, 3 e 4 mudaram. Os atualizados estão na entrada de 13/10.*
+
 1. **A amostra vale bem menos do que o número de entrevistas.** O qui-quadrado comum diria que 83 dos 88 testes têm diferença real; o Rao-Scott, 36; depois do Holm, 10. Em impostos 2024 por renda, o efeito do desenho é de umas 9 vezes. Ponto pro método: é uma melhoria em relação a quem usou o qui-quadrado simples, como Vargas et al. (2021).
 2. **As diferenças são pequenas, mas existem.** V de Cramér médio: região 0,175, renda 0,166, escolaridade 0,149 e raça 0,128, todas na faixa "pequena" da régua de Cohen. Escolaridade era a maior em 2023 (0,236) e caiu em 2024 e 2025 (0,096 e 0,116).
 3. **Escolaridade e região são as diferenças mais firmes:** dos 10 testes que passam no Holm, 5 são de escolaridade, 4 de região, 1 de renda e nenhum de raça.
@@ -291,6 +295,9 @@ As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos 
 - **O G1 é contexto, não teste:** ele mistura quem não conseguiu usar a internet com quem nem precisou do serviço (em impostos, quem ganha pouco muitas vezes nem precisa declarar o imposto de renda). O Rao-Scott, o Holm e o ranking continuam só no G2 (decisão nº 1).
 
 **Achados**
+
+*Com o fator de 2023 (13/10), o 57 do item 5 virou 55.*
+
 1. **Contando todo mundo, pouca gente resolve tudo pela internet.** Em 2025, de cada 100 usuários de Internet, uns 18 resolveram impostos inteiramente online, 12 resolveram documentos e menos de 4, algo com a polícia.
 2. **Saúde é a área mais tentada (36,6%) e a menos resolvida (22,6% de quem tentou).** Hipótese pro texto: muita coisa da saúde, como a consulta e o exame, não dá pra terminar pela internet.
 3. **A dupla barreira da renda, em impostos 2025:** quem tem até 1 SM tenta menos (12,0% contra 62,6% de quem tem mais de 5 SM) e, quando tenta, resolve menos (39,7% contra 73,5%). Contando todo mundo, 4,8% contra 46,0%: quase 10 vezes menos.
@@ -312,15 +319,35 @@ As decisões 1 a 6 que estavam aqui (medida principal, "não tem renda", grupos 
 - **Finanças e a CETIC:** o número oficial é menor (57,5% contra 63,1% em 2025) porque a tabela da CETIC (aba C6) conta os usuários de 10 anos ou mais, e o projeto usa os de 16 anos ou mais. No mesmo universo, os dois batem: a diferença é de no máximo 0,17 ponto.
 
 **Achados**
-1. **Finanças é o uso mais comum:** 63,1% dos usuários em 2025, contra 36,6% que tentaram saúde, o serviço público mais tentado.
+1. **Finanças é o uso mais comum:** 63,1% dos usuários em 2025, contra 36,6% que tentaram saúde, o serviço público mais tentado. A C8_H olha os últimos 3 meses, e o G1, os últimos 12: mesmo numa janela menor, finanças fica bem acima.
 2. **A desigualdade em finanças é de escolaridade, renda e região, e não de raça.** Em 2025, são 87,1% no superior contra 32,3% no até fundamental (gap de 54,8 pontos, o maior do projeto), e 86,0% com mais de 5 SM contra 44,3% com até 1 SM. O Sudeste fica 13,1 pontos acima do Nordeste. Os gaps de raça (de 2,1 a 3,8 pontos) não são reais em nenhum ano.
 3. **É o mesmo desenho do G1:** no uso, pesam escolaridade e renda, e raça quase não pesa. A diferença no uso da internet aparece também num serviço privado, e não só nos públicos.
+
+### 13/10/2026: revisão final e o fator de 2023
+
+- **Revisão de ponta a ponta:** o projeto foi conferido inteiro, sem mexer no repositório: o último commit rodado do zero em outro computador, os dados brutos, a harmonização contra os dicionários, os % e as margens contra as planilhas oficiais da CETIC, toda a estatística refeita por outro caminho e os textos contra as tabelas.
+- **O que passou:**
+    - a reprodução: as 8 tabelas de `outputs/` saíram idênticas, byte por byte;
+    - os % contra a CETIC: 2.595 comparações, em todos os grupos que as planilhas publicam (G1, G2 entre quem tentou, G2 entre todos, governo eletrônico e finanças), iguais até a terceira casa decimal. Finanças, no universo de 10 anos ou mais, fica a no máximo 0,84 ponto, pelo NS/NR e pela C3 × J3 abaixo dos 16 anos;
+    - a soma dos pesos do universo: igual ao total oficial de usuários de 16 anos ou mais, nos 3 anos;
+    - a estatística: as estimativas, os gaps, o Rao-Scott (pela fórmula do `svychisq`, refeita em Python), o Holm (pelo `statsmodels`), o V e o ranking, refeitos do zero, deram os mesmos números.
+- **As margens de 2024 e 2025:** o fator (1,054 e 1,140) reproduz a margem oficial em todos os 1.079 grupos comparados, e não só no Brasil.
+- **O achado: as margens de 2023.** Na linha do Brasil, a razão oficial ÷ nossa ficava perto de 1 (saúde, 1,25). Em todos os grupos, a média é 1,054 (504 comparações; a oficial é maior em 4 de cada 5), o mesmo fator de 2024. 2023 e 2024 têm o mesmo desenho de amostra (88 estratos, conglomerados em 3 estágios), e o guia de estatística de 03/10 já previa que o fator de 2024 valeria pra 2023.
+- **Decisão (nº 9 revista):** 2023 também leva o fator 1,054. A mudança veio da conferência com as margens oficiais, e não dos resultados, e só deixa as conclusões mais cautelosas (margem maior).
+- **O que mudou nos resultados** (só 2023; 2024, 2025, o V e o ranking não mudam):
+    - Rao-Scott com p < 0,05: de 36 pra 33 testes; depois do Holm, de 10 pra 8. Saem trabalho por escolaridade e impostos por região, os dois de 2023. Os 8 que ficam: 4 de escolaridade, 3 de região, 1 de renda e nenhum de raça; 5 são de impostos;
+    - gaps reais do G2: de 57 pra 55 (saem documentos e saúde, Sudeste − Nordeste, 2023);
+    - linhas com aviso: de 52 pra 56 no G2 e de 23 pra 25 no G1; linhas com IC abaixo de zero: de 15 pra 16;
+    - as conclusões continuam: escolaridade e região são as diferenças mais firmes, impostos é a área mais desigual e mais certa, e nenhum teste de raça passa.
+- **Correções de texto:** as réplicas brutas de 2023 vão de 0 a 7 (e não de 0 a 5); a ressalva de que finanças olha os últimos 3 meses e o G1, os últimos 12; a coluna Nº na tabela de decisões; OuvidoriaSUS e Fala.BR como trabalho futuro; "fórmula do `svychisq`" na linha do teste; duas frases do notebook 03 (seções 8 e 13.2). O notebook 01 passou a imprimir só o nome da pasta do projeto, e o `requirements.txt` ganhou as versões.
+- **Pro artigo:** o G2 é "realizou ao menos um desses serviços sem precisar ir até um posto de atendimento" (questionário), então o texto não pode dizer que a pessoa resolveu todos os serviços da área. Duas limitações novas: em 2025 o texto de 4 itens do G mudou (A, B, C e G ganharam exemplos, como CNH, vacinas, Sisu e tarifas de ônibus), e o cadastro de 2025 tirou 7.805 setores de agrupamentos indígenas e 5.591 de quilombolas. A coleta foi CAPI (tablet, face a face) nos 3 anos.
+- **Situação:** aprovada pelo grupo.
 
 ---
 
 ## Próximos passos
 
-1. Rodar o notebook 03 de novo, com Restart + Run All, e commitar.
-2. Montar no Power BI as figuras do artigo e o painel, a partir das 7 tabelas de `outputs/`.
-3. Escrever o texto: metodologia, resultados e conclusão, com as limitações (o universo C3 × J3, o fator das margens, a raça, o G1 e finanças como medidas de uso, e a camada extra como trabalho futuro).
-4. Fechamento: o `docs/documentacao_projeto.md`, o caderno e o último commit.
+1. Rodar os 3 notebooks na ordem (01, 02 e 03), com Restart + Run All, e commitar as mudanças de 13/10.
+2. Montar no Power BI as figuras do artigo e o painel, a partir das 7 tabelas de `outputs/` (se o painel já tiver sido começado, é só usar Página Inicial > Atualizar).
+3. Escrever o texto: metodologia, resultados e conclusão, com as limitações (o universo C3 × J3, o fator das margens, a raça e o cadastro de 2025, o texto novo de 4 itens em 2025, o G1 e finanças como medidas de uso, com períodos diferentes, e a camada extra e as bases complementares como trabalho futuro).
+4. Fechamento: recriar o `docs/documentacao_projeto.md` (o guia do código pode virar esse arquivo), atualizar o caderno e fazer o último commit.

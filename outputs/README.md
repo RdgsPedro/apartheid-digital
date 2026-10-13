@@ -4,7 +4,7 @@ Aqui ficam os resultados que saem dos notebooks 02 e 03: tabelas e gráficos pro
 
 ## Saídas do notebook 03 (resultados, com margem de erro)
 
-Todas as tabelas usam só os usuários de Internet de 16 anos ou mais (o universo das tabelas da CETIC), as faixas da análise (renda em 5 e escolaridade em 3) e o fator das margens de 2024 e 2025 (decisão nº 9 do caderno).
+Todas as tabelas usam só os usuários de Internet de 16 anos ou mais (o universo das tabelas da CETIC), as faixas da análise (renda em 5 e escolaridade em 3) e o fator das margens (decisão nº 9 do caderno: × 1,054 em 2023 e 2024 e × 1,140 em 2025).
 
 ### O G2: resolveu tudo pela internet, entre quem tentou (a medida principal)
 
@@ -40,7 +40,7 @@ As duas tabelas têm as mesmas colunas das tabelas do G2, então dá pra juntar 
 
 ### Finanças, à parte
 
-Finanças está na pergunta de pesquisa, mas não tem G1 nem G2: vem da C8_H ("fez consultas, pagamentos ou outras transações financeiras" pela internet, nos últimos 3 meses). É uma medida de uso, como o G1, então entra à parte, com IC e gaps, sem teste e sem ranking.
+Finanças está na pergunta de pesquisa, mas não tem G1 nem G2: vem da C8_H ("fez consultas, pagamentos ou outras transações financeiras" pela internet, nos últimos 3 meses). É uma medida de uso, como o G1 (que olha os últimos 12 meses, e não os últimos 3), então entra à parte, com IC e gaps, sem teste e sem ranking.
 
 - `estimativas_financas_ic.csv` (57 linhas): o mesmo formato do `estimativas_g1_ic.csv`, com `area` = finanças (3 anos × 19 categorias).
     - `pct`: % que fez transações financeiras pela internet, entre todos os usuários de Internet do grupo. O "não sabe / não respondeu" conta como "não"

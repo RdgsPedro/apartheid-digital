@@ -1,22 +1,26 @@
+# Versoes: pandas, svy e seaborn fixas nas que o grupo usou (Python 3.12.10, notebooks de 12/10);
+# as outras com um intervalo seguro. Pra travar tudo, no .venv do projeto:
+#   pip freeze > requirements-lock.txt
+
 # Leitura, limpeza e harmonizacao
-pandas
-numpy
-openpyxl
+pandas==3.0.6
+numpy>=2,<3
+openpyxl>=3.1,<4
 
 # Estatistica
-scipy
-statsmodels
+scipy>=1.13,<2
+statsmodels>=0.14
 # svy: Rao-Scott, proporcoes com IC e regressao com o desenho amostral.
 # Versao fixa porque a biblioteca ainda esta em beta e muda a API entre versoes;
 # os exemplos do guia de estatistica foram testados na 0.31.0
 svy==0.31.0
 # o svy trabalha com tabelas Polars; o pyarrow faz a conversao do pandas para o Polars
-polars
+polars>=1.36.1
 pyarrow
 
 # Graficos da analise exploratoria
-matplotlib
-seaborn
+matplotlib>=3.8,<4
+seaborn==0.13.2
 
 # Notebooks
 jupyter
